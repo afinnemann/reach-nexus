@@ -1,0 +1,29 @@
+{# Archival plan #}
+<section class="section">
+  <div class="container-narrow">
+    <p><a href="./">← {% if lang == "en" %}About{% else %}Sobre{% endif %}</a></p>
+    <h1>{% if lang == "en" %}Archival plan{% else %}Plano de arquivamento{% endif %}</h1>
+
+    <p>
+      {% if lang == "en" %}REACH Nexus is a five-year project, ending on 31 December 2030. We are planning the end now, while we still have the resources to do it well. Static project websites rot quietly; consortium sites rot loudly. This page sets out what will happen.{% else %}O REACH Nexus é um projeto de cinco anos, encerrando-se em 31 de dezembro de 2030. Planejamos o fim agora, enquanto ainda temos recursos para fazê-lo bem. Sites estáticos de projeto se deterioram silenciosamente; sites de consórcio se deterioram ruidosamente. Esta página estabelece o que acontecerá.{% endif %}
+    </p>
+
+    <h2>{% if lang == "en" %}Annual snapshots{% else %}Capturas anuais{% endif %}</h2>
+    <p>
+      {% if lang == "en" %}Each year, the published website is tagged in git, deposited as a release in the project Zenodo community, and assigned a DOI. The CITATION.cff file is updated each release so the citation always points to the most recent stable version.{% else %}A cada ano, o site publicado é marcado no git, depositado como release na comunidade Zenodo do projeto e recebe um DOI. O arquivo CITATION.cff é atualizado a cada release para que a citação sempre aponte para a versão estável mais recente.{% endif %}
+    </p>
+
+    <h2>{% if lang == "en" %}End of grant (December 2030){% else %}Fim do projeto (dezembro de 2030){% endif %}</h2>
+    <ul>
+      <li>{% if lang == "en" %}A final tagged release of the website is deposited to Zenodo with a permanent DOI.{% else %}Uma release final marcada do site é depositada no Zenodo com um DOI permanente.{% endif %}</li>
+      <li>{% if lang == "en" %}Open data and code are deposited via the Repositories listed in the Data &amp; FAIR page.{% else %}Dados abertos e código são depositados via os Repositórios listados na página Dados &amp; FAIR.{% endif %}</li>
+      <li>{% if lang == "en" %}Restricted data follow the access controls set out in their data-management plans, retained at the host institution for the period required by law and ethics approval.{% else %}Dados restritos seguem os controles de acesso definidos em seus planos de gestão de dados, retidos na instituição anfitriã pelo período exigido por lei e pela aprovação ética.{% endif %}</li>
+      <li>{% if lang == "en" %}The live website remains online for at least three years after the project ends, hosted by the University of Amsterdam. After that, traffic is redirected to the final Zenodo deposit so that links from publications remain resolvable.{% else %}O site permanece no ar por pelo menos três anos após o encerramento, hospedado pela Universidade de Amsterdã. Em seguida, o tráfego é redirecionado para o depósito final no Zenodo para que os links em publicações permaneçam resolvíveis.{% endif %}</li>
+    </ul>
+
+    <h2>{% if lang == "en" %}Long-term institutional record{% else %}Registro institucional de longo prazo{% endif %}</h2>
+    <p>
+      {% if lang == "en" %}A summary report of the project — outcomes, lessons, and the consortium's accountability to the four communities — is deposited at NWO/FAPESP, the host institutional repositories, and at the partner organisations Instituto Alana and Fiocruz Amazônia.{% else %}Um relatório-síntese do projeto — resultados, lições e a prestação de contas do consórcio às quatro comunidades — é depositado na NWO/FAPESP, nos repositórios institucionais anfitriões, e nas organizações parceiras Instituto Alana e Fiocruz Amazônia.{% endif %}
+    </p>
+  </div>
+</section>

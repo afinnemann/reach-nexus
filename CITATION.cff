@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+title: "REACH Nexus — Urban Climate Health Nexus consortium website"
+message: "If you reference this website or its content, please cite it as below."
+authors:
+  - family-names: Wiers
+    given-names: Reinout W. H. J.
+    affiliation: "Universiteit van Amsterdam"
+  - family-names: Giatti
+    given-names: Leandro Luiz
+    affiliation: "School of Public Health, University of São Paulo"
+  - name: "REACH Nexus consortium"
+type: software
+license: MIT
+repository-code: "https://github.com/reach-nexus/reach-nexus.github.io"
+url: "https://reach-nexus.github.io"
+abstract: >-
+  Project website for the Urban Climate Health Nexus (UCH-Nexus) consortium,
+  publicly branded REACH Nexus. A five-year (2026–2030) Brazilian–Dutch
+  research consortium funded by NWO and FAPESP under the Merian Fund
+  Cooperation Brazil – The Netherlands 2024 call on extreme heat and water
+  events and their effects on urban health.
+keywords:
+  - urban climate
+  - planetary health
+  - mental health
+  - citizen science
+  - system dynamics
+  - climate justice
+  - urban planning
+  - public health
+preferred-citation:
+  type: software
+  title: "REACH Nexus — Urban Climate Health Nexus consortium website"
+  authors:
+    - family-names: Wiers
+      given-names: Reinout W. H. J.
+    - family-names: Giatti
+      given-names: Leandro Luiz
+    - name: "REACH Nexus consortium"
+  year: 2026
+  url: "https://reach-nexus.github.io"

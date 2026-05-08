@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reach-nexus.github.io/sitemap.xml

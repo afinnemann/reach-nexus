@@ -1,0 +1,49 @@
+{# Contact #}
+<section class="section">
+  <div class="container-narrow">
+    <h1>{% if lang == "en" %}Contact{% else %}Contato{% endif %}</h1>
+
+    <div class="grid grid--2" style="margin-top: var(--space-6);">
+      <div class="card">
+        <h2 style="margin-top: 0;">{% if lang == "en" %}Scientific{% else %}Científico{% endif %}</h2>
+        <p>{% if lang == "en" %}For research-related questions, methods, collaborations, and data requests:{% else %}Para questões de pesquisa, métodos, colaborações e solicitações de dados:{% endif %}</p>
+        <p>
+          <strong>Reinout Wiers</strong> · UvA<br>
+          <a href="mailto:r.w.h.j.wiers@uva.nl">r.w.h.j.wiers@uva.nl</a>
+        </p>
+        <p>
+          <strong>Leandro Giatti</strong> · USP<br>
+          <a href="mailto:lgiatti@usp.br">lgiatti@usp.br</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top: 0;">{% if lang == "en" %}Press &amp; media{% else %}Imprensa &amp; mídia{% endif %}</h2>
+        <p>{% if lang == "en" %}For press enquiries, interviews, and media partnerships:{% else %}Para imprensa, entrevistas e parcerias de mídia:{% endif %}</p>
+        <p><a href="mailto:{{ config.contact.press_email }}">{{ config.contact.press_email }}</a></p>
+        <p style="font-size: var(--text-sm); color: var(--color-text-muted);">{% if lang == "en" %}Please allow up to 5 working days for a response.{% else %}Por favor, aguarde até 5 dias úteis para resposta.{% endif %}</p>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top: 0;">{% if lang == "en" %}Community partners &amp; participation{% else %}Parceiros comunitários &amp; participação{% endif %}</h2>
+        <p>{% if lang == "en" %}If you live at one of the case sites and want to participate in the citizen-science work, or if you represent a community organisation:{% else %}Se você mora em um dos sítios e quer participar do trabalho de ciência cidadã, ou se representa uma organização comunitária:{% endif %}</p>
+        <ul>
+          <li><strong>Jardim Pantanal</strong> · {% if lang == "en" %}via{% else %}via{% endif %} <a href="https://alana.org.br/" rel="noopener">Instituto Alana</a></li>
+          <li><strong>Parque das Tribos</strong> · {% if lang == "en" %}via{% else %}via{% endif %} <a href="https://www.ilmd.fiocruz.br/" rel="noopener">ILMD/Fiocruz Amazônia</a></li>
+          <li><strong>Nelson Mandelapark</strong> · {% if lang == "en" %}via{% else %}via{% endif %} UvA + Amsterdam municipality</li>
+          <li><strong>Ede</strong> · {% if lang == "en" %}via{% else %}via{% endif %} Municipality of Ede + UvA</li>
+        </ul>
+        <p style="font-size: var(--text-sm); color: var(--color-text-muted);">{% if lang == "en" %}Named local liaisons will be added once confirmed by each Local Working Group.{% else %}Pessoas de contato locais serão adicionadas após confirmação por cada Grupo de Trabalho Local.{% endif %}</p>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top: 0;">{% if lang == "en" %}Recruitment &amp; opportunities{% else %}Recrutamento &amp; oportunidades{% endif %}</h2>
+        <p>{% if lang == "en" %}For PhD and postdoc opportunities:{% else %}Para vagas de doutorado e pós-doutorado:{% endif %}</p>
+        <p><a class="btn btn--primary" href="vacancies.html">{% if lang == "en" %}See vacancies{% else %}Ver vagas{% endif %} →</a></p>
+      </div>
+    </div>
+
+    <h2 style="margin-top: var(--space-12);">{% if lang == "en" %}Postal address{% else %}Endereço postal{% endif %}</h2>
+    <p style="max-width: 50ch;">{{ config.contact["address_" + lang] }}</p>
+  </div>
+</section>

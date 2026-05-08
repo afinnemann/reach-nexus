@@ -1,0 +1,23 @@
+{# Work packages overview #}
+<section class="section">
+  <div class="container">
+    <h1>{% if lang == "en" %}Work packages{% else %}Pacotes de trabalho{% endif %}</h1>
+    <p style="font-size: var(--text-lg); max-width: 60ch;">
+      {% if lang == "en" %}Five work packages move the project from <em>understanding</em> the climate–health nexus through <em>integrating</em> models with local knowledge to <em>improving</em> policy and practice.{% else %}Cinco pacotes de trabalho movem o projeto desde a fase de <em>entender</em> o nexo clima–saúde, passando pela <em>integração</em> de modelos com saberes locais, até <em>melhorar</em> políticas e práticas.{% endif %}
+    </p>
+
+    <div class="wp-grid">
+      {% for wp in wps %}
+      <article class="wp-card">
+        <div class="wp-card__num">WP{{ wp.number }}</div>
+        <h2 class="wp-card__title"><a href="{{ wp.id }}.html" style="text-decoration: none; color: inherit;">{{ wp["title_" + lang] }}</a></h2>
+        <div class="wp-card__meta">
+          {% if lang == "en" %}Lead{% else %}Liderança{% endif %}: {{ wp["lead_" + lang] }} · {% if lang == "en" %}Months{% else %}Meses{% endif %} {{ wp.months }}
+        </div>
+        <p>{{ wp["summary_" + lang] }}</p>
+        <a class="wp-card__link" href="{{ wp.id }}.html">{% if lang == "en" %}Open WP{{ wp.number }}{% else %}Abrir WP{{ wp.number }}{% endif %} →</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

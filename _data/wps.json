@@ -1,0 +1,141 @@
+{
+  "$schema_version": "1.0",
+  "wps": [
+    {
+      "id": "wp1",
+      "number": 1,
+      "title_en": "Project Participatory Governance",
+      "title_pt": "Governança Participativa do Projeto",
+      "lead_en": "Reinout Wiers & Leandro Giatti",
+      "lead_pt": "Reinout Wiers & Leandro Giatti",
+      "lead_ids": ["wiers", "giatti"],
+      "months": "1–60",
+      "phase_en": "All phases",
+      "phase_pt": "Todas as fases",
+      "summary_en": "Builds the consortium's governance backbone: stakeholder mapping, the management committee, thematic committees, advisory board, and local working groups, plus communication and dissemination across the five-year project.",
+      "summary_pt": "Constrói a estrutura de governança do consórcio: mapeamento de partes interessadas, comitê gestor, comitês temáticos, conselho consultivo e grupos de trabalho locais, além de comunicação e disseminação ao longo dos cinco anos do projeto.",
+      "deliverables_en": [
+        "Stakeholder map across the four sites",
+        "Project governance documentation (Management Committee, Thematic Committees, Advisory Board)",
+        "Local Working Groups established at each site",
+        "Project website (this site) and dissemination plan",
+        "Annual progress reports and final consortium report"
+      ],
+      "deliverables_pt": [
+        "Mapa de partes interessadas nos quatro sítios",
+        "Documentação de governança do projeto (Comitê Gestor, Comitês Temáticos, Conselho Consultivo)",
+        "Grupos de Trabalho Locais estabelecidos em cada sítio",
+        "Site do projeto (este site) e plano de disseminação",
+        "Relatórios anuais de progresso e relatório final do consórcio"
+      ]
+    },
+    {
+      "id": "wp2",
+      "number": 2,
+      "title_en": "Joint Modelling — Designing the Model",
+      "title_pt": "Modelagem Conjunta — Desenhando o Modelo",
+      "lead_en": "Reinout Wiers",
+      "lead_pt": "Reinout Wiers",
+      "lead_ids": ["wiers"],
+      "months": "1–47",
+      "phase_en": "Understand → Integrate",
+      "phase_pt": "Entender → Integrar",
+      "summary_en": "Surveys existing climate, mental-health, and physical-health models, then co-creates site-specific causal-loop diagrams and agent-based models. Produces a comparative meta-model and vulnerability dashboards that link climate exposure to health outcomes across the four cases.",
+      "summary_pt": "Mapeia modelos existentes de clima, saúde mental e saúde física, então co-cria diagramas de loop causal e modelos baseados em agentes específicos para cada sítio. Produz um meta-modelo comparativo e painéis de vulnerabilidade que ligam a exposição climática a desfechos de saúde nos quatro casos.",
+      "deliverables_en": [
+        "Review of existing climate-health models",
+        "Site-specific causal loop diagrams (4 sites)",
+        "Site-specific agent-based models",
+        "Comparative meta-model across sites",
+        "Vulnerability dashboards"
+      ],
+      "deliverables_pt": [
+        "Revisão de modelos clima-saúde existentes",
+        "Diagramas de loop causal por sítio (4 sítios)",
+        "Modelos baseados em agentes por sítio",
+        "Meta-modelo comparativo entre sítios",
+        "Painéis de vulnerabilidade"
+      ]
+    },
+    {
+      "id": "wp3",
+      "number": 3,
+      "title_en": "Health Effects of Climate Extremes — Public Policy and Systems Analysis",
+      "title_pt": "Efeitos dos Extremos Climáticos sobre a Saúde — Análise de Políticas Públicas e Sistemas",
+      "lead_en": "Leandro Giatti & Vanessa Harris",
+      "lead_pt": "Leandro Giatti & Vanessa Harris",
+      "lead_ids": ["giatti", "harris"],
+      "months": "3–27",
+      "phase_en": "Understand",
+      "phase_pt": "Entender",
+      "summary_en": "Brings together secondary data on climate-sensitive disease, post-extreme-event mental-health surveys, and a system-level analysis of primary-health-care capacity in each case site. Surfaces where the health system bends and where it breaks under climate stress.",
+      "summary_pt": "Reúne dados secundários sobre doenças climato-sensíveis, levantamentos pós-evento extremo de saúde mental, e uma análise sistêmica da capacidade da atenção primária em cada sítio. Mostra onde o sistema de saúde se adapta e onde se rompe sob estresse climático.",
+      "deliverables_en": [
+        "Secondary-data analysis of climate-sensitive disease across sites",
+        "Mental-health surveys following extreme weather events",
+        "Primary-health-care capacity assessment per site",
+        "Comparative health-systems brief"
+      ],
+      "deliverables_pt": [
+        "Análise de dados secundários de doenças climato-sensíveis nos sítios",
+        "Levantamentos de saúde mental pós-eventos climáticos extremos",
+        "Avaliação de capacidade da atenção primária por sítio",
+        "Síntese comparativa dos sistemas de saúde"
+      ]
+    },
+    {
+      "id": "wp4",
+      "number": 4,
+      "title_en": "Citizen-Science Approach",
+      "title_pt": "Abordagem de Ciência Cidadã",
+      "lead_en": "Mariana Nicolletti",
+      "lead_pt": "Mariana Nicolletti",
+      "lead_ids": ["nicolletti"],
+      "months": "6–60",
+      "phase_en": "Integrate → Improve",
+      "phase_pt": "Integrar → Melhorar",
+      "summary_en": "Engages residents at each site as co-researchers. Designs participatory workshops and equips community members with digital mobile tools to collect real-time data during and after extreme weather events, ensuring models reflect lived experience rather than only administrative records.",
+      "summary_pt": "Envolve moradores de cada sítio como co-pesquisadores. Desenha oficinas participativas e equipa membros das comunidades com ferramentas digitais móveis para coleta de dados em tempo real durante e após eventos climáticos extremos, garantindo que os modelos reflitam a experiência vivida e não apenas registros administrativos.",
+      "deliverables_en": [
+        "Territorial-engagement protocol per site",
+        "Participatory workshops (year 1 onwards)",
+        "Mobile data-collection toolkit",
+        "Community-collected dataset feeding WP2 models"
+      ],
+      "deliverables_pt": [
+        "Protocolo de engajamento territorial por sítio",
+        "Oficinas participativas (a partir do ano 1)",
+        "Kit móvel de coleta de dados",
+        "Conjunto de dados coletados em comunidade alimentando os modelos do WP2"
+      ]
+    },
+    {
+      "id": "wp5",
+      "number": 5,
+      "title_en": "Innovations in Public-Health Policies and Urban Planning",
+      "title_pt": "Inovações em Políticas de Saúde Pública e Planejamento Urbano",
+      "lead_en": "André Nollkaemper, Jannes Willems, Pedro Roberto Jacobi",
+      "lead_pt": "André Nollkaemper, Jannes Willems, Pedro Roberto Jacobi",
+      "lead_ids": ["nollkaemper", "willems", "jacobi"],
+      "months": "13–60",
+      "phase_en": "Improve",
+      "phase_pt": "Melhorar",
+      "summary_en": "Develops an integrative urban climate-stress framework, simulates city-level interventions using the WP2 models, and runs pilot living-lab interventions in one Brazilian and one Dutch site. Translates findings into policy advice tailored to each municipality.",
+      "summary_pt": "Desenvolve um arcabouço integrativo de estresse climático urbano, simula intervenções em escala de cidade usando os modelos do WP2, e conduz intervenções-piloto em laboratórios vivos em um sítio brasileiro e um holandês. Traduz os achados em recomendações de política para cada município.",
+      "deliverables_en": [
+        "Integrative urban climate-stress framework",
+        "City-level intervention simulations",
+        "Living-lab pilot in Brazil",
+        "Living-lab pilot in the Netherlands",
+        "Site-specific policy briefs"
+      ],
+      "deliverables_pt": [
+        "Arcabouço integrativo de estresse climático urbano",
+        "Simulações de intervenção em escala de cidade",
+        "Laboratório-vivo piloto no Brasil",
+        "Laboratório-vivo piloto nos Países Baixos",
+        "Sínteses de política por sítio"
+      ]
+    }
+  ]
+}

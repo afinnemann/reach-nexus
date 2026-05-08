@@ -1,0 +1,110 @@
+{# Home page #}
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <span class="hero__eyebrow">{{ config.project["name_full_" + lang] }} · NWO–FAPESP Merian Fund</span>
+    <h1 id="hero-heading" class="hero__title">
+      {{ config.project.name_short }}
+    </h1>
+    <p class="hero__lede">
+      {{ config.project["tagline_" + lang] }}
+    </p>
+    <p>
+      <a class="btn btn--primary" href="sites/">{% if lang == "en" %}Explore the case sites{% else %}Conheça os sítios{% endif %} →</a>
+      <a class="btn btn--ghost" href="approach.html">{% if lang == "en" %}Read the approach{% else %}Leia a abordagem{% endif %}</a>
+    </p>
+
+    <div class="hero__sites-grid" aria-label="{% if lang == 'en' %}Case sites{% else %}Sítios{% endif %}">
+      {% for s in sites %}
+      <a class="hero__site-card" href="sites/{{ s.id }}.html">
+        <div class="hero__site-card__country">{{ s.country_flag }} {{ s["city_" + lang] }}</div>
+        <div class="hero__site-card__name">{{ s["name_" + lang] }}</div>
+        <div class="hero__site-card__tagline">{{ s["region_" + lang] }}</div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="summary-heading">
+  <div class="container-narrow">
+    <h2 id="summary-heading">{% if lang == "en" %}Why this project{% else %}Por que este projeto{% endif %}</h2>
+    <p style="font-size: var(--text-lg);">{{ config.project["summary_" + lang] }}</p>
+  </div>
+</section>
+
+<section class="section section--tinted" aria-labelledby="map-heading">
+  <div class="container">
+    <h2 id="map-heading">{% if lang == "en" %}Where the work happens{% else %}Onde o trabalho acontece{% endif %}</h2>
+    <p style="max-width: 60ch;">
+      {% if lang == "en" %}Markers show approximate, partner-agreed locations only. We do not display household-level coordinates for any site, and we use city-level resolution where requested by community partners.{% else %}Os marcadores mostram apenas localizações aproximadas e acordadas com os parceiros. Não exibimos coordenadas em nível domiciliar em nenhum sítio, e usamos resolução em nível de cidade quando solicitado pelos parceiros comunitários.{% endif %}
+    </p>
+    <div class="map-wrap" data-reach-map data-lang="{{ lang }}" aria-label="{% if lang == 'en' %}Map of the four case sites{% else %}Mapa dos quatro sítios{% endif %}">
+      <div class="map" id="map"></div>
+      <noscript>
+        <div class="map-fallback">
+          <p><strong>{% if lang == "en" %}Map unavailable without JavaScript.{% else %}Mapa indisponível sem JavaScript.{% endif %}</strong> {% if lang == "en" %}The four case sites are:{% else %}Os quatro sítios são:{% endif %}</p>
+          <ul>
+            {% for s in sites %}
+            <li><strong>{{ s["name_" + lang] }}</strong> — {{ s["city_" + lang] }}, {{ s["region_" + lang] }} ({{ s.country }})</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </noscript>
+      <script type="application/json" data-sites>
+{{ sites | tojson }}
+      </script>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="stats-heading">
+  <div class="container">
+    <h2 id="stats-heading" class="visually-hidden">{% if lang == "en" %}Project at a glance{% else %}Projeto em números{% endif %}</h2>
+    <div class="stat-strip">
+      <div class="stat"><div class="stat__num">4</div><div class="stat__label">{% if lang == "en" %}Case sites{% else %}Sítios{% endif %}</div></div>
+      <div class="stat"><div class="stat__num">5</div><div class="stat__label">{% if lang == "en" %}Years (2026–2030){% else %}Anos (2026–2030){% endif %}</div></div>
+      <div class="stat"><div class="stat__num">2</div><div class="stat__label">{% if lang == "en" %}Countries{% else %}Países{% endif %}</div></div>
+      <div class="stat"><div class="stat__num">9</div><div class="stat__label">{% if lang == "en" %}Partner institutions{% else %}Instituições parceiras{% endif %}</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--warm" aria-labelledby="phases-heading">
+  <div class="container">
+    <h2 id="phases-heading">{% if lang == "en" %}Three phases over five years{% else %}Três fases em cinco anos{% endif %}</h2>
+    <div class="phases">
+      <div class="phase">
+        <div class="phase__num">I</div>
+        <h3 class="phase__title">{% if lang == "en" %}Understand{% else %}Entender{% endif %}</h3>
+        <p>{% if lang == "en" %}Foundational analysis: baseline health-system capacity, climate exposure and historic vulnerability across the four sites, viewed through a climate-justice lens.{% else %}Análise fundacional: capacidade dos sistemas de saúde, exposição climática e vulnerabilidade histórica nos quatro sítios, sob a lente da justiça climática.{% endif %}</p>
+      </div>
+      <div class="phase">
+        <div class="phase__num">II</div>
+        <h3 class="phase__title">{% if lang == "en" %}Integrate{% else %}Integrar{% endif %}</h3>
+        <p>{% if lang == "en" %}Local working groups co-develop models that capture the interactions between urban planning, health policy and climate adaptation, fed by citizen-science data.{% else %}Grupos de trabalho locais co-desenvolvem modelos que capturam as interações entre planejamento urbano, política de saúde e adaptação climática, alimentados por dados de ciência cidadã.{% endif %}</p>
+      </div>
+      <div class="phase">
+        <div class="phase__num">III</div>
+        <h3 class="phase__title">{% if lang == "en" %}Improve{% else %}Melhorar{% endif %}</h3>
+        <p>{% if lang == "en" %}Translate findings into living-lab pilots in Brazil and the Netherlands, plus model-based policy advice for partner municipalities.{% else %}Traduzir os achados em pilotos em laboratórios vivos no Brasil e nos Países Baixos, além de recomendações de política baseadas em modelos para municípios parceiros.{% endif %}</p>
+      </div>
+    </div>
+    <p><a href="work-packages/" class="btn btn--ghost">{% if lang == "en" %}See all five work packages{% else %}Ver os cinco pacotes de trabalho{% endif %} →</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="news-heading">
+  <div class="container-narrow">
+    <h2 id="news-heading">{% if lang == "en" %}Project log{% else %}Diário do projeto{% endif %}</h2>
+    <ul class="log-list">
+      {% for entry in news[:3] %}
+      <li>
+        <div class="log-entry__date"><time datetime="{{ entry.date }}">{{ entry.date }}</time></div>
+        <h3 class="log-entry__title">{{ entry["title_" + lang] }}</h3>
+        <p>{{ entry["body_" + lang] }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    <p><a href="news.html">{% if lang == "en" %}All log entries{% else %}Todas as entradas{% endif %} →</a></p>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+{# Project log #}
+<section class="section">
+  <div class="container-narrow">
+    <h1>{% if lang == "en" %}Project log{% else %}Diário do projeto{% endif %}</h1>
+    <p>
+      {% if lang == "en" %}A dated log of project events — fieldwork milestones, publications, partner activities, vacancies, and updates from the four sites. Roughly monthly cadence; gaps are real, not hidden.{% else %}Um diário datado dos eventos do projeto — marcos de trabalho de campo, publicações, atividades de parceiros, vagas e atualizações dos quatro sítios. Cadência aproximadamente mensal; intervalos são reais, não escondidos.{% endif %}
+    </p>
+
+    <ul class="log-list">
+      {% for entry in news %}
+      <li>
+        <div class="log-entry__date"><time datetime="{{ entry.date }}">{{ entry.date }}</time></div>
+        <h2 class="log-entry__title">{{ entry["title_" + lang] }}</h2>
+        <p>{{ entry["body_" + lang] }}</p>
+        {% if entry.tags %}
+        <div class="log-entry__tags">
+          {% for t in entry.tags %}<span class="tag tag--country">{{ t }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% if not news %}
+    <p><em>{% if lang == "en" %}No entries yet.{% else %}Ainda sem entradas.{% endif %}</em></p>
+    {% endif %}
+  </div>
+</section>

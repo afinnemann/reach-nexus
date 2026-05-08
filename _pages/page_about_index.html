@@ -1,0 +1,36 @@
+{# About hub #}
+<section class="section">
+  <div class="container-narrow">
+    <h1>{% if lang == "en" %}About REACH Nexus{% else %}Sobre o REACH Nexus{% endif %}</h1>
+    <p style="font-size: var(--text-lg);">
+      {% if lang == "en" %}REACH Nexus is the public name of the <strong>Urban Climate Health Nexus (UCH-Nexus)</strong> consortium. We work openly. The pages below set out how the consortium is governed, what ethical commitments we operate under, how we treat data and AI, and what happens to our outputs after the funded period ends.{% else %}REACH Nexus é o nome público do consórcio <strong>Urban Climate Health Nexus (UCH-Nexus)</strong>. Trabalhamos com transparência. As páginas abaixo apresentam como o consórcio é governado, quais compromissos éticos seguimos, como tratamos dados e IA, e o que acontecerá com nossos produtos após o término do financiamento.{% endif %}
+    </p>
+
+    <div class="grid grid--2" style="margin-top: var(--space-8);">
+      <a class="card" href="governance.html" style="text-decoration: none; color: inherit;">
+        <h3>{% if lang == "en" %}Governance{% else %}Governança{% endif %}</h3>
+        <p>{% if lang == "en" %}Consortium structure, decision rights, conflict resolution, and how WP leads are appointed.{% else %}Estrutura do consórcio, direitos de decisão, resolução de conflitos e nomeação de líderes de WP.{% endif %}</p>
+      </a>
+      <a class="card" href="ethics.html" style="text-decoration: none; color: inherit;">
+        <h3>{% if lang == "en" %}Ethics{% else %}Ética{% endif %}</h3>
+        <p>{% if lang == "en" %}IRB references, community-engagement principles, and our data-ethics commitments.{% else %}Referências do CEP/IRB, princípios de engajamento comunitário e compromissos éticos com dados.{% endif %}</p>
+      </a>
+      <a class="card" href="data.html" style="text-decoration: none; color: inherit;">
+        <h3>{% if lang == "en" %}Data &amp; FAIR{% else %}Dados &amp; FAIR{% endif %}</h3>
+        <p>{% if lang == "en" %}Data-management approach, repositories, embargo policy, and indigenous/community data sovereignty.{% else %}Abordagem de gestão de dados, repositórios, política de embargo e soberania de dados indígenas/comunitários.{% endif %}</p>
+      </a>
+      <a class="card" href="ai-use.html" style="text-decoration: none; color: inherit;">
+        <h3>{% if lang == "en" %}AI use{% else %}Uso de IA{% endif %}</h3>
+        <p>{% if lang == "en" %}Where the project uses LLMs and other AI methods, and where it deliberately does not.{% else %}Onde o projeto usa LLMs e outros métodos de IA, e onde deliberadamente não usa.{% endif %}</p>
+      </a>
+      <a class="card" href="safeguarding.html" style="text-decoration: none; color: inherit;">
+        <h3>{% if lang == "en" %}Safeguarding{% else %}Salvaguarda{% endif %}</h3>
+        <p>{% if lang == "en" %}Researcher conduct, community-grievance channel, and data-incident contacts.{% else %}Conduta de pesquisadores, canal de queixas comunitárias e contatos para incidentes de dados.{% endif %}</p>
+      </a>
+      <a class="card" href="archival.html" style="text-decoration: none; color: inherit;">
+        <h3>{% if lang == "en" %}Archival plan{% else %}Plano de arquivamento{% endif %}</h3>
+        <p>{% if lang == "en" %}How the website, data, and outputs persist after the project ends in 2030.{% else %}Como o site, os dados e os produtos persistem após o término do projeto em 2030.{% endif %}</p>
+      </a>
+    </div>
+  </div>
+</section>

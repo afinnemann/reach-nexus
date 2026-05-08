@@ -1,0 +1,42 @@
+{
+  "$schema_version": "1.0",
+  "_note": "Replace [TBC] grant numbers with the official references issued by NWO and FAPESP at award letter. Acknowledgement strings are templates — confirm exact wording with each funder's communications office before any external publication.",
+  "funders": [
+    {
+      "id": "nwo",
+      "name": "NWO",
+      "long_name_en": "Dutch Research Council (NWO)",
+      "long_name_pt": "Conselho Holandês de Pesquisa (NWO)",
+      "grant_number": "[TBC]",
+      "amount": "EUR 699,994",
+      "url": "https://www.nwo.nl/",
+      "logo": "/assets/funders/nwo-placeholder.svg",
+      "ack_en": "This work is supported by the Dutch Research Council (NWO) under grant [TBC] within the NWO–FAPESP Cooperation Brazil–The Netherlands 2024 call \"Extreme Heat and Water Events: Mitigating the Adverse Health Effects of Climate Change in Cities\" (Merian Fund).",
+      "ack_pt": "Este trabalho conta com o apoio do Conselho Holandês de Pesquisa (NWO) sob o auxílio [TBC], no âmbito da chamada NWO–FAPESP Cooperação Brasil–Países Baixos 2024 \"Extreme Heat and Water Events: Mitigating the Adverse Health Effects of Climate Change in Cities\" (Merian Fund)."
+    },
+    {
+      "id": "fapesp",
+      "name": "FAPESP",
+      "long_name_en": "São Paulo Research Foundation (FAPESP)",
+      "long_name_pt": "Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)",
+      "grant_number": "[TBC]",
+      "amount": "BRL 3,998,215.55",
+      "url": "https://fapesp.br/",
+      "logo": "/assets/funders/fapesp-placeholder.svg",
+      "ack_en": "This work is supported by the São Paulo Research Foundation (FAPESP) under grant [TBC] within the FAPESP–NWO Cooperation Brazil–The Netherlands 2024 call \"Extreme Heat and Water Events.\"",
+      "ack_pt": "Este trabalho conta com o apoio da Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP) sob o auxílio [TBC], no âmbito da chamada FAPESP–NWO Cooperação Brasil–Países Baixos 2024 \"Extreme Heat and Water Events.\""
+    },
+    {
+      "id": "merian",
+      "name": "Merian Fund",
+      "long_name_en": "Merian Fund · Cooperation Brazil – The Netherlands",
+      "long_name_pt": "Merian Fund · Cooperação Brasil – Países Baixos",
+      "grant_number": "Cooperation Brazil – The Netherlands 2024",
+      "amount": null,
+      "url": "https://www.nwo.nl/en/researchprogrammes/merian-fund",
+      "logo": "/assets/funders/merian-placeholder.svg",
+      "ack_en": "Funded under the Merian Fund Cooperation Brazil – The Netherlands 2024 programme.",
+      "ack_pt": "Financiado pelo programa Merian Fund Cooperação Brasil – Países Baixos 2024."
+    }
+  ]
+}

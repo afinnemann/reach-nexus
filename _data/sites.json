@@ -1,0 +1,181 @@
+{
+  "$schema_version": "1.0",
+  "_note": "coords.precision is one of: city | neighbourhood | exact. Map renderer must refuse to plot without an explicit value. Default to 'neighbourhood' or 'city' for any informal-settlement or indigenous-community site until the local partner has signed off on a higher precision.",
+  "sites": [
+    {
+      "id": "jardim-pantanal",
+      "name_en": "Jardim Pantanal",
+      "name_pt": "Jardim Pantanal",
+      "city_en": "São Paulo",
+      "city_pt": "São Paulo",
+      "region_en": "São Paulo State, Brazil",
+      "region_pt": "Estado de São Paulo, Brasil",
+      "country": "BR",
+      "country_flag": "🇧🇷",
+      "coords": {
+        "lat": -23.4944,
+        "lon": -46.4344,
+        "precision": "neighbourhood",
+        "precision_note_en": "Marker placed at the approximate centroid of the Jardim Helena district. Exact community boundaries are not displayed at the request of local partners.",
+        "precision_note_pt": "Marcador colocado no centróide aproximado do distrito de Jardim Helena. Os limites exatos da comunidade não são exibidos a pedido dos parceiros locais."
+      },
+      "tagline_en": "Tietê River floodplain — informal settlement with the highest social-vulnerability index (IPVS 6).",
+      "tagline_pt": "Várzea do Rio Tietê — assentamento informal com o maior Índice Paulista de Vulnerabilidade Social (IPVS 6).",
+      "summary_en": "Jardim Pantanal sits within the Jardim Helena district of São Miguel Paulista, eastern São Paulo. The unplanned settlement on the Tietê River floodplain experiences recurring flooding during the summer months because of inadequate drainage and water-management infrastructure. It carries the highest IPVS score (6), classifying it as a 'subnormal urban settlement,' and was directly affected by the 2025 Tietê floods. The Jardim Helena district as a whole has 135,000 residents across 9.1 km².",
+      "summary_pt": "O Jardim Pantanal localiza-se no distrito de Jardim Helena, em São Miguel Paulista, zona leste de São Paulo. A comunidade não planejada na várzea do Rio Tietê sofre alagamentos recorrentes durante o verão devido à infraestrutura precária de drenagem e gestão das águas. O distrito carrega o maior índice IPVS (6), classificando-o como 'aglomerado subnormal', e foi diretamente afetado pelas enchentes do Tietê em 2025. O distrito de Jardim Helena como um todo tem 135.000 habitantes em 9,1 km².",
+      "vulnerabilities_en": [
+        "Recurring summer flooding",
+        "Water and sanitation gaps",
+        "High social-vulnerability index",
+        "Climate-sensitive disease burden"
+      ],
+      "vulnerabilities_pt": [
+        "Enchentes recorrentes no verão",
+        "Saneamento e abastecimento precários",
+        "Alto índice de vulnerabilidade social",
+        "Carga elevada de doenças climato-sensíveis"
+      ],
+      "wp_focus": [
+        "wp3",
+        "wp4",
+        "wp5"
+      ],
+      "local_partner_en": "Instituto Alana — community-facing partner. Named local liaison to be confirmed before launch.",
+      "local_partner_pt": "Instituto Alana — parceiro de relação com a comunidade. Contato local nomeado a ser confirmado antes do lançamento.",
+      "consent_en": "What this page shows: a city-level marker for Jardim Pantanal and a plain-language description of the case study. What it does not show: precise household locations, individual-level data, or photographs of identifiable people. Who decided: shown framing was reviewed with Instituto Alana and the project ethics lead. Reach out via the contact below to suggest corrections.",
+      "consent_pt": "O que esta página mostra: um marcador em nível de cidade para o Jardim Pantanal e uma descrição em linguagem simples do estudo de caso. O que não mostra: localizações domiciliares precisas, dados de nível individual, ou fotografias de pessoas identificáveis. Quem decidiu: o enquadramento exibido foi revisado com o Instituto Alana e a liderança ética do projeto. Entre em contato pelo formulário abaixo para sugerir correções."
+    },
+    {
+      "id": "parque-das-tribos",
+      "name_en": "Parque das Tribos",
+      "name_pt": "Parque das Tribos",
+      "city_en": "Manaus",
+      "city_pt": "Manaus",
+      "region_en": "Amazonas State, Brazil",
+      "region_pt": "Estado do Amazonas, Brasil",
+      "country": "BR",
+      "country_flag": "🇧🇷",
+      "coords": {
+        "lat": -3.0833,
+        "lon": -60.0833,
+        "precision": "city",
+        "precision_note_en": "Marker placed at a city-level location for Manaus. Exact community location is not displayed in line with indigenous data-sovereignty principles agreed with Fiocruz Amazônia and the Parque das Tribos community association.",
+        "precision_note_pt": "Marcador colocado em nível de cidade para Manaus. A localização exata da comunidade não é exibida em conformidade com princípios de soberania de dados indígenas acordados com a Fiocruz Amazônia e a associação comunitária do Parque das Tribos."
+      },
+      "tagline_en": "Indigenous urban settlement of ~2,800 people from 35 Amazonian ethnic groups.",
+      "tagline_pt": "Comunidade indígena urbana de ~2.800 pessoas de 35 grupos étnicos amazônicos.",
+      "summary_en": "Parque das Tribos was founded in 2012 in the Tarumã-Açu region of western Manaus and is home to approximately 2,800 indigenous residents from 35 distinct Amazonian ethnic groups. The community sits alongside Cidade das Luzes and Cristo Rei. Key vulnerabilities include rural-to-urban migration pressures, intercultural adaptation, precarious sanitation, food insecurity, urban heat island effects, and exposure to the historic Amazon droughts of recent years.",
+      "summary_pt": "O Parque das Tribos foi fundado em 2012 na região do Tarumã-Açu, oeste de Manaus, e abriga aproximadamente 2.800 indígenas de 35 grupos étnicos amazônicos distintos. A comunidade fica ao lado da Cidade das Luzes e do Cristo Rei. As vulnerabilidades principais incluem pressões de migração rural-urbana, adaptação intercultural, saneamento precário, insegurança alimentar, efeitos de ilha de calor urbana, e exposição às secas históricas recentes da Amazônia.",
+      "vulnerabilities_en": [
+        "Rural–urban migration",
+        "Intercultural adaptation",
+        "Precarious sanitation",
+        "Food insecurity",
+        "Urban heat island effects",
+        "Amazon drought exposure"
+      ],
+      "vulnerabilities_pt": [
+        "Migração rural-urbana",
+        "Adaptação intercultural",
+        "Saneamento precário",
+        "Insegurança alimentar",
+        "Ilhas de calor urbano",
+        "Exposição às secas amazônicas"
+      ],
+      "wp_focus": [
+        "wp2",
+        "wp3",
+        "wp4"
+      ],
+      "local_partner_en": "ILMD/Fiocruz Amazônia — research partner. Community liaison through the Parque das Tribos community association. Named contact to be confirmed.",
+      "local_partner_pt": "ILMD/Fiocruz Amazônia — parceiro de pesquisa. Relacionamento comunitário através da associação comunitária do Parque das Tribos. Contato nomeado a ser confirmado.",
+      "consent_en": "What this page shows: a city-level marker for Manaus and a plain-language description of the case study. What it does not show: the community location, household-level data, individual identifiers, or culturally sensitive ethnographic detail. Who decided: shown framing follows indigenous data-sovereignty principles agreed with Fiocruz Amazônia and the community association.",
+      "consent_pt": "O que esta página mostra: um marcador em nível de cidade para Manaus e uma descrição em linguagem simples do estudo de caso. O que não mostra: a localização da comunidade, dados de nível domiciliar, identificadores individuais, ou detalhes etnográficos culturalmente sensíveis. Quem decidiu: o enquadramento exibido segue princípios de soberania de dados indígenas acordados com a Fiocruz Amazônia e a associação comunitária."
+    },
+    {
+      "id": "nelson-mandelapark",
+      "name_en": "Nelson Mandelapark",
+      "name_pt": "Nelson Mandelapark",
+      "city_en": "Amsterdam",
+      "city_pt": "Amsterdã",
+      "region_en": "Bijlmermeer, Amsterdam Zuidoost, Netherlands",
+      "region_pt": "Bijlmermeer, Amsterdã Sudeste, Países Baixos",
+      "country": "NL",
+      "country_flag": "🇳🇱",
+      "coords": {
+        "lat": 52.317,
+        "lon": 4.961,
+        "precision": "neighbourhood",
+        "precision_note_en": "Marker placed at Nelson Mandelapark in the Bijlmermeer.",
+        "precision_note_pt": "Marcador colocado no Nelson Mandelapark, no Bijlmermeer."
+      },
+      "tagline_en": "Modernist 1960s neighbourhood in low-lying Amsterdam Southeast — flood and heat pressures.",
+      "tagline_pt": "Bairro modernista dos anos 1960 na zona Sudeste de Amsterdã — pressões de enchente e calor.",
+      "summary_en": "Nelson Mandelapark (formerly Bijlmerpark) is a central park in the Bijlmermeer, a neighbourhood in southeast Amsterdam with around 86,000 residents. The area was designed and built in the 1960s as a modernist polder development, sitting among the lowest-lying parts of the city and exposed both to flood risk and to localised urban heat island effects. Recent green-space interventions include the redeveloped Nelson Mandelapark (2014) and Brasapark (2022), alongside concerns about gentrification near Amstel III.",
+      "summary_pt": "O Nelson Mandelapark (anteriormente Bijlmerpark) é um parque central no Bijlmermeer, bairro na zona sudeste de Amsterdã com cerca de 86.000 habitantes. A área foi projetada e construída na década de 1960 como um empreendimento polder modernista, situando-se entre as partes mais baixas da cidade e exposta tanto ao risco de enchentes quanto a efeitos localizados de ilha de calor urbano. Intervenções recentes em áreas verdes incluem a reforma do Nelson Mandelapark (2014) e o Brasapark (2022), em paralelo a preocupações com gentrificação perto do Amstel III.",
+      "vulnerabilities_en": [
+        "Flood risk in low-lying polder",
+        "Urban heat island in built-up zones",
+        "Gentrification pressures",
+        "Health-equity gradients"
+      ],
+      "vulnerabilities_pt": [
+        "Risco de enchente em pôlder baixo",
+        "Ilha de calor urbano em zonas adensadas",
+        "Pressões de gentrificação",
+        "Gradientes de equidade em saúde"
+      ],
+      "wp_focus": [
+        "wp3",
+        "wp4",
+        "wp5"
+      ],
+      "local_partner_en": "Universiteit van Amsterdam + Amsterdam municipality. Named local liaison to be confirmed.",
+      "local_partner_pt": "Universidade de Amsterdã + Município de Amsterdã. Contato local nomeado a ser confirmado.",
+      "consent_en": "What this page shows: the public location of Nelson Mandelapark and a plain-language description of the case study. What it does not show: household-level data or individual identifiers. Who decided: framing reviewed with the Amsterdam-based research team.",
+      "consent_pt": "O que esta página mostra: a localização pública do Nelson Mandelapark e uma descrição em linguagem simples do estudo de caso. O que não mostra: dados de nível domiciliar ou identificadores individuais. Quem decidiu: enquadramento revisado com a equipe de pesquisa de Amsterdã."
+    },
+    {
+      "id": "ede",
+      "name_en": "Ede",
+      "name_pt": "Ede",
+      "city_en": "Ede",
+      "city_pt": "Ede",
+      "region_en": "Gelderland Province, Netherlands",
+      "region_pt": "Província de Guéldria, Países Baixos",
+      "country": "NL",
+      "country_flag": "🇳🇱",
+      "coords": {
+        "lat": 52.0333,
+        "lon": 5.6667,
+        "precision": "city",
+        "precision_note_en": "Marker placed at the centre of Ede municipality.",
+        "precision_note_pt": "Marcador colocado no centro do município de Ede."
+      },
+      "tagline_en": "Mid-sized Dutch municipality on the agricultural fringe — heat, drought, and air-quality pressures.",
+      "tagline_pt": "Município médio holandês na franja agrícola — pressões de calor, seca e qualidade do ar.",
+      "summary_en": "Ede is a smaller Dutch municipality (~120,000 residents) but among the largest by surface area. Its proximity to agricultural land creates particular challenges for air quality and public health. Climate change brings combined pressures from heat, drought, and heavy rainfall. The municipality's challenges are twofold: green urban development to manage urban heat island effects and water absorption in built-up areas, alongside a rural transition toward sustainable agriculture and energy. Ede already monitors heat-stress vulnerability per neighbourhood.",
+      "summary_pt": "Ede é um município holandês de menor porte (~120.000 habitantes), mas entre os maiores em superfície. Sua proximidade com áreas agrícolas cria desafios particulares de qualidade do ar e saúde pública. As mudanças climáticas trazem pressões combinadas de calor, seca e chuvas intensas. Os desafios do município são duplos: desenvolvimento urbano verde para gerir efeitos de ilha de calor urbano e absorção de água em zonas construídas, em paralelo a uma transição rural para agricultura e energia sustentáveis. Ede já monitora a vulnerabilidade ao estresse térmico por bairro.",
+      "vulnerabilities_en": [
+        "Heat stress (neighbourhood-level monitoring active)",
+        "Drought pressure",
+        "Agricultural air-quality interface",
+        "Heavy-rainfall absorption capacity"
+      ],
+      "vulnerabilities_pt": [
+        "Estresse térmico (monitoramento por bairro ativo)",
+        "Pressão de seca",
+        "Interface agricultura–qualidade do ar",
+        "Capacidade de absorção em chuvas intensas"
+      ],
+      "wp_focus": [
+        "wp2",
+        "wp5"
+      ],
+      "local_partner_en": "Municipality of Ede + Universiteit van Amsterdam.",
+      "local_partner_pt": "Município de Ede + Universidade de Amsterdã.",
+      "consent_en": "What this page shows: a city-level marker for the Ede municipality and a plain-language description of the case study. What it does not show: neighbourhood-level vulnerability scores held by the municipality.",
+      "consent_pt": "O que esta página mostra: um marcador em nível de cidade para o município de Ede e uma descrição em linguagem simples do estudo de caso. O que não mostra: pontuações de vulnerabilidade por bairro mantidas pelo município."
+    }
+  ]
+}

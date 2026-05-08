@@ -1,0 +1,17 @@
+/* TEAM */
+Project co-leads:
+  Reinout Wiers (UvA, NL)  — r.w.h.j.wiers@uva.nl
+  Leandro Giatti (USP, BR) — lgiatti@usp.br
+
+Site build & maintenance: Adam Finnemann (UvA, NL).
+Portuguese editorial review: USP team (named when assigned).
+
+/* SITE */
+Last build: see the "Last updated" timestamp in the page footer.
+Stack: hand-authored HTML/CSS/JS, vendored Leaflet, Python+Jinja2 build script.
+No analytics. No tracking. No third-party CDN at runtime.
+
+/* THANKS */
+The community partners at Jardim Pantanal (via Instituto Alana) and Parque
+das Tribos (via Fiocruz Amazônia) — and the Local Working Groups at Nelson
+Mandelapark and Ede.

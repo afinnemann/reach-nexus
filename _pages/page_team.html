@@ -1,0 +1,45 @@
+{# Team page — sorted by role_rank then surname (no country grouping) #}
+<section class="section">
+  <div class="container">
+    <h1>{% if lang == "en" %}Team{% else %}Equipe{% endif %}</h1>
+    <p style="font-size: var(--text-lg); max-width: 60ch;">
+      {% if lang == "en" %}REACH Nexus is co-led by Reinout Wiers (UvA) and Leandro Giatti (USP) with equal billing across the consortium. Members are listed by their role on the project; ordering is alphabetical within each tier and never grouped by country.{% else %}O REACH Nexus é co-liderado por Reinout Wiers (UvA) e Leandro Giatti (USP) com igualdade de status no consórcio. Os membros são listados conforme seu papel no projeto; a ordenação é alfabética dentro de cada nível e nunca por país.{% endif %}
+    </p>
+
+    {% set ranks = [
+      (1, "Principal Investigators (co-leads)" if lang == "en" else "Pesquisadores Principais (co-líderes)"),
+      (2, "Co-applicants" if lang == "en" else "Co-proponentes"),
+      (3, "Collaboration partners" if lang == "en" else "Parceiros de colaboração"),
+      (4, "Project staff" if lang == "en" else "Equipe do projeto"),
+    ] %}
+
+    {% for rank, label in ranks %}
+      {% set group = members | selectattr("role_rank", "equalto", rank) | list | sort(attribute="surname") %}
+      {% if group %}
+      <section class="team-section" aria-labelledby="role-{{ rank }}">
+        <h2 class="team-section__heading" id="role-{{ rank }}">{{ label }}</h2>
+        <div class="team-grid">
+          {% for m in group %}
+          <article class="member">
+            <div class="member__head">
+              <div class="member__avatar" aria-hidden="true">{{ m.name.split(" ")[0][0] }}{{ m.surname[0] }}</div>
+              <div>
+                <h3 class="member__name">{{ m.title }} {{ m.name }}</h3>
+                <p class="member__role">{{ m["role_" + lang] }}</p>
+                <p class="member__inst">{{ m["institution_" + lang] }}</p>
+              </div>
+            </div>
+            {% if m["bio_" + lang] %}<p class="member__bio">{{ m["bio_" + lang] }}</p>{% endif %}
+            {% if m.email %}<p class="member__email"><a href="mailto:{{ m.email }}">{{ m.email }}</a></p>{% endif %}
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+    {% endfor %}
+
+    <p style="margin-top: var(--space-12); padding: var(--space-4) var(--space-5); background: var(--color-primary-tint); border-radius: var(--radius); font-size: var(--text-sm); color: var(--color-text-muted);">
+      {% if lang == "en" %}<strong>Photos and ORCID identifiers</strong> will be added as members confirm their preferred image and identifier. Initials are used as a placeholder. Email the project to suggest corrections.{% else %}<strong>Fotos e identificadores ORCID</strong> serão adicionados conforme os membros confirmarem suas imagens e identificadores preferidos. Iniciais são usadas como espaço reservado. Entre em contato para sugerir correções.{% endif %}
+    </p>
+  </div>
+</section>

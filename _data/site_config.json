@@ -1,0 +1,30 @@
+{
+  "$schema_version": "1.0",
+  "project": {
+    "name_short": "REACH Nexus",
+    "name_full_en": "Urban Climate Health Nexus",
+    "name_full_pt": "Urban Climate Health Nexus",
+    "tagline_en": "Resilience and health equity through citizen science, system modelling, and policy innovation.",
+    "tagline_pt": "Resiliência e equidade em saúde por meio de ciência cidadã, modelagem de sistemas e inovação em políticas.",
+    "research_question_en": "How do urban heat, flooding and air pollution interact with mental and physical health in vulnerable neighbourhoods — and what works to change those trajectories?",
+    "research_question_pt": "Como o calor urbano, as enchentes e a poluição do ar interagem com a saúde mental e física em bairros vulneráveis — e o que funciona para mudar essas trajetórias?",
+    "duration": "1 January 2026 – 31 December 2030 (60 months)",
+    "duration_pt": "1º de janeiro de 2026 – 31 de dezembro de 2030 (60 meses)",
+    "summary_en": "Intensifying extreme weather events disproportionately impact marginalized populations, increasing existing health inequalities and vulnerabilities. This complex \"polycrisis\" is studied from a systems perspective. Four case studies are developed where experts and stakeholders collaboratively model vulnerabilities and identify feedback loops to find key intervention targets. Data collection follows, using a citizen-science approach to ensure that the models reflect local contexts and lived experiences. These models are refined over time, ultimately generating site-specific policy recommendations and a transferable modelling framework applicable to other vulnerable urban settings worldwide.",
+    "summary_pt": "Eventos climáticos extremos cada vez mais intensos afetam desproporcionalmente populações marginalizadas, aprofundando desigualdades e vulnerabilidades em saúde. Esta \"policrise\" complexa é estudada por uma perspectiva sistêmica. São desenvolvidos quatro estudos de caso em que especialistas e partes interessadas modelam, conjuntamente, vulnerabilidades e identificam loops de retroalimentação para encontrar alvos-chave de intervenção. Em seguida, vem a coleta de dados, com uma abordagem de ciência cidadã que garante que os modelos reflitam contextos locais e experiências vividas. Esses modelos são refinados ao longo do tempo, gerando recomendações de política específicas para cada sítio e um arcabouço de modelagem transferível para outros contextos urbanos vulneráveis no mundo."
+  },
+  "contact": {
+    "press_email": "press@reach-nexus.org",
+    "general_email": "info@reach-nexus.org",
+    "github": "https://github.com/reach-nexus/reach-nexus.github.io",
+    "address_en": "Universiteit van Amsterdam · Faculty of Social and Behavioural Sciences · REACH Nexus · Nieuwe Achtergracht 129B · 1018 WS Amsterdam · The Netherlands",
+    "address_pt": "Universidade de Amsterdã · Faculdade de Ciências Sociais e Comportamentais · REACH Nexus · Nieuwe Achtergracht 129B · 1018 WS Amsterdam · Países Baixos"
+  },
+  "deploy": {
+    "canonical_base": "https://afinnemann.github.io",
+    "base_path": "/reach-nexus",
+    "_note_base_path": "Set to '' (empty string) when serving from a root domain (custom domain, or a <user>.github.io repo). Set to '/<repo-name>' when serving from a project repo. Affects all internal URLs and the sitemap.",
+    "default_lang": "en",
+    "languages": ["en", "pt"]
+  }
+}

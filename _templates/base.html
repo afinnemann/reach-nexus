@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="{{ lang }}" data-base="{{ base_path }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_title }} · {{ project.name_short }}</title>
+  <meta name="description" content="{{ page_description }}">
+
+  <link rel="canonical" href="{{ canonical }}">
+  {% if alt_lang_url %}<link rel="alternate" hreflang="{{ alt_lang }}" href="{{ alt_lang_url }}">{% endif %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ canonical }}">
+  <link rel="alternate" hreflang="x-default" href="{{ default_canonical }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page_title }} · {{ project.name_short }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:locale" content="{{ 'en_GB' if lang == 'en' else 'pt_BR' }}">
+  <meta property="og:site_name" content="{{ project.name_short }}">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#335c67">
+
+  <!-- Favicon (inline SVG, no extra request) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%226%22%20fill%3D%22%23335c67%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2258%25%22%20font-family%3D%22Georgia%2Cserif%22%20font-weight%3D%22700%22%20font-size%3D%2218%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ER%3C%2Ftext%3E%3C%2Fsvg%3E">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ base_path }}/assets/css/tokens.css">
+  <link rel="stylesheet" href="{{ base_path }}/assets/css/styles.css">
+  {% if needs_leaflet %}<link rel="stylesheet" href="{{ base_path }}/assets/vendor/leaflet-1.9.4/leaflet.css">{% endif %}
+</head>
+<body>
+  <a href="#main" class="skip-link">{{ "Skip to main content" if lang == "en" else "Pular para o conteúdo principal" }}</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="{{ home_url }}" class="brand" aria-label="{{ project.name_short }} home">
+        <span class="brand__mark">REACH</span><span>Nexus</span>
+        <span class="brand__sub">· UCH-Nexus</span>
+      </a>
+      <nav class="nav" role="navigation" aria-label="{{ 'Primary' if lang == 'en' else 'Principal' }}">
+        {% for item in nav_items %}
+          <a href="{{ item.href }}"{% if item.current %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {% endfor %}
+        <span class="lang-switch" role="navigation" aria-label="{{ 'Language' if lang == 'en' else 'Idioma' }}">
+          <a href="{{ lang_en_url }}"{% if lang == 'en' %} aria-current="true"{% endif %} hreflang="en">EN</a>
+          <a href="{{ lang_pt_url }}"{% if lang == 'pt' %} aria-current="true"{% endif %} hreflang="pt">PT</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    {{ content | safe }}
+  </main>
+
+  {% if include_funder_strip %}
+  <section class="funder-strip" aria-labelledby="funders-heading">
+    <div class="container">
+      <h2 id="funders-heading">{{ "Funded by" if lang == "en" else "Financiado por" }}</h2>
+      <div class="funder-strip__row">
+        {% for f in funders %}
+        <a class="funder-strip__item" href="{{ f.url }}" rel="noopener">{{ f["long_name_" + lang] }}</a>
+        {% endfor %}
+      </div>
+      <p style="margin-top: var(--space-4); font-size: var(--text-sm); opacity: 0.85;">
+        <a href="{{ funding_url }}">{{ "Funding details, grant numbers, and acknowledgement strings" if lang == "en" else "Detalhes de financiamento, números de auxílio e textos de agradecimento" }} →</a>
+      </p>
+    </div>
+  </section>
+  {% endif %}
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h3>{{ project.name_short }}</h3>
+          <p style="font-size: var(--text-sm); max-width: 40ch; color: #c8d6da;">
+            {{ "REACH Nexus is the public name of the Urban Climate Health Nexus (UCH-Nexus) consortium, jointly funded by NWO and FAPESP." if lang == "en" else "REACH Nexus é o nome público do consórcio Urban Climate Health Nexus (UCH-Nexus), financiado conjuntamente por NWO e FAPESP." }}
+          </p>
+        </div>
+        <div>
+          <h3>{{ "Project" if lang == "en" else "Projeto" }}</h3>
+          <ul>
+            <li><a href="{{ home_url }}">{{ "Home" if lang == "en" else "Início" }}</a></li>
+            <li><a href="{{ sites_url }}">{{ "Case sites" if lang == "en" else "Sítios" }}</a></li>
+            <li><a href="{{ wp_url }}">{{ "Work packages" if lang == "en" else "Pacotes de trabalho" }}</a></li>
+            <li><a href="{{ team_url }}">{{ "Team" if lang == "en" else "Equipe" }}</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>{{ "About" if lang == "en" else "Sobre" }}</h3>
+          <ul>
+            <li><a href="{{ about_url }}governance.html">{{ "Governance" if lang == "en" else "Governança" }}</a></li>
+            <li><a href="{{ about_url }}ethics.html">{{ "Ethics" if lang == "en" else "Ética" }}</a></li>
+            <li><a href="{{ about_url }}data.html">{{ "Data &amp; FAIR" if lang == "en" else "Dados &amp; FAIR" }}</a></li>
+            <li><a href="{{ about_url }}ai-use.html">{{ "AI use" if lang == "en" else "Uso de IA" }}</a></li>
+            <li><a href="{{ about_url }}safeguarding.html">{{ "Safeguarding" if lang == "en" else "Salvaguarda" }}</a></li>
+            <li><a href="{{ about_url }}archival.html">{{ "Archival" if lang == "en" else "Arquivamento" }}</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>{{ "Connect" if lang == "en" else "Conecte-se" }}</h3>
+          <ul>
+            <li><a href="{{ contact_url }}">{{ "Contact" if lang == "en" else "Contato" }}</a></li>
+            <li><a href="{{ vacancies_url }}">{{ "Vacancies" if lang == "en" else "Vagas" }}</a></li>
+            <li><a href="{{ news_url }}">{{ "Project log" if lang == "en" else "Diário do projeto" }}</a></li>
+            <li><a href="{{ accessibility_url }}">{{ "Accessibility" if lang == "en" else "Acessibilidade" }}</a></li>
+            <li><a href="{{ project.github if project.github else '#' }}" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 REACH Nexus consortium. {{ "Content licensed CC BY 4.0; site code MIT." if lang == "en" else "Conteúdo sob licença CC BY 4.0; código do site sob licença MIT." }}</span>
+        <span>{{ "Last updated" if lang == "en" else "Última atualização" }}: <time datetime="{{ last_updated }}">{{ last_updated }}</time></span>
+      </div>
+    </div>
+  </footer>
+
+  {% if needs_leaflet %}<script src="{{ base_path }}/assets/vendor/leaflet-1.9.4/leaflet.js" defer></script>
+  <script src="{{ base_path }}/assets/js/map.js" defer></script>{% endif %}
+</body>
+</html>

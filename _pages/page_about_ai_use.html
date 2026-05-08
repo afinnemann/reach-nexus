@@ -1,0 +1,30 @@
+{# AI use #}
+<section class="section">
+  <div class="container-narrow">
+    <p><a href="./">← {% if lang == "en" %}About{% else %}Sobre{% endif %}</a></p>
+    <h1>{% if lang == "en" %}AI use{% else %}Uso de IA{% endif %}</h1>
+
+    <p>
+      {% if lang == "en" %}This page is a transparency note. It explains where the project uses large language models (LLMs) and other AI methods, where it deliberately does not, and how decisions get reviewed.{% else %}Esta página é uma nota de transparência. Explica onde o projeto usa modelos de linguagem (LLMs) e outros métodos de IA, onde deliberadamente não usa, e como as decisões são revisadas.{% endif %}
+    </p>
+
+    <h2>{% if lang == "en" %}Where AI is used{% else %}Onde a IA é usada{% endif %}</h2>
+    <ul>
+      <li>{% if lang == "en" %}<strong>Evidence discovery and harmonisation</strong> in the WP3 disaster-health data pipeline (project name CLIHEALTH). LLMs assist in screening literature, structuring extracted data, and harmonising heterogeneous sources. A human researcher reviews every output before it enters the analysis dataset.{% else %}<strong>Descoberta e harmonização de evidências</strong> no pipeline de dados de saúde em desastres do WP3 (projeto CLIHEALTH). LLMs auxiliam na triagem de literatura, estruturação de dados extraídos e harmonização de fontes heterogêneas. Um pesquisador humano revisa cada saída antes de entrar no conjunto de análise.{% endif %}</li>
+      <li>{% if lang == "en" %}<strong>Translation drafts</strong> between English and Portuguese on this website. All public-facing copy is reviewed by a human translator before publishing.{% else %}<strong>Rascunhos de tradução</strong> entre inglês e português neste site. Todo texto público é revisado por uma tradutora humana antes da publicação.{% endif %}</li>
+      <li>{% if lang == "en" %}<strong>Code assistance</strong> in software components, with code reviewed and tested by the team.{% else %}<strong>Assistência de código</strong> em componentes de software, com revisão e testes pela equipe.{% endif %}</li>
+    </ul>
+
+    <h2>{% if lang == "en" %}Where AI is not used{% else %}Onde a IA não é usada{% endif %}</h2>
+    <ul>
+      <li>{% if lang == "en" %}<strong>Generating mental-health survey responses or qualitative quotes</strong>. All such data come from human participants under informed consent.{% else %}<strong>Geração de respostas de pesquisa em saúde mental ou citações qualitativas</strong>. Todos esses dados vêm de participantes humanos com consentimento informado.{% endif %}</li>
+      <li>{% if lang == "en" %}<strong>Decisions affecting individual people</strong> in the case communities — diagnosis, intervention assignment, eligibility for participation. These remain human-led.{% else %}<strong>Decisões que afetam pessoas</strong> nas comunidades de estudo — diagnóstico, alocação a intervenção, elegibilidade para participar. Estas permanecem conduzidas por humanos.{% endif %}</li>
+      <li>{% if lang == "en" %}<strong>Synthesising community testimony</strong>. Where residents describe lived experiences, those words are not paraphrased by an LLM in any public output.{% else %}<strong>Síntese de testemunhos comunitários</strong>. Quando moradores descrevem experiências vividas, essas palavras não são parafraseadas por LLM em nenhum produto público.{% endif %}</li>
+    </ul>
+
+    <h2>{% if lang == "en" %}Review and appeal{% else %}Revisão e recurso{% endif %}</h2>
+    <p>
+      {% if lang == "en" %}AI-use questions are reviewed by the Ethics Thematic Committee. To raise a concern about how the project uses AI, contact the consortium via the contact page.{% else %}Questões sobre uso de IA são revisadas pelo Comitê Temático de Ética. Para apresentar uma preocupação sobre como o projeto usa IA, entre em contato com o consórcio pela página de contato.{% endif %}
+    </p>
+  </div>
+</section>

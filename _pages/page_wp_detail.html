@@ -1,0 +1,50 @@
+{# Per-WP detail page #}
+<section class="section">
+  <div class="container-narrow">
+    <p><a href="./">← {% if lang == "en" %}All work packages{% else %}Todos os pacotes{% endif %}</a></p>
+    <h1>WP{{ wp.number }} — {{ wp["title_" + lang] }}</h1>
+    <p class="wp-detail__lead">{{ wp["summary_" + lang] }}</p>
+
+    <div class="wp-detail__meta">
+      <div>
+        <strong>{% if lang == "en" %}Lead{% else %}Liderança{% endif %}</strong><br>
+        {{ wp["lead_" + lang] }}
+      </div>
+      <div>
+        <strong>{% if lang == "en" %}Months{% else %}Meses{% endif %}</strong><br>
+        {{ wp.months }}
+      </div>
+      <div>
+        <strong>{% if lang == "en" %}Phase{% else %}Fase{% endif %}</strong><br>
+        {{ wp["phase_" + lang] }}
+      </div>
+    </div>
+
+    <h2>{% if lang == "en" %}Deliverables{% else %}Entregas{% endif %}</h2>
+    <ul>
+      {% for d in wp["deliverables_" + lang] %}
+      <li>{{ d }}</li>
+      {% endfor %}
+    </ul>
+
+    {% set leads = team | selectattr("id", "in", wp.lead_ids) | list %}
+    {% if leads %}
+    <h2>{% if lang == "en" %}Team contacts{% else %}Contatos da equipe{% endif %}</h2>
+    <div class="team-grid">
+      {% for m in leads %}
+      <article class="member">
+        <div class="member__head">
+          <div class="member__avatar" aria-hidden="true">{{ m.name.split(" ")[0][0] }}{{ m.surname[0] }}</div>
+          <div>
+            <h3 class="member__name">{{ m.title }} {{ m.name }}</h3>
+            <p class="member__role">{{ m["role_" + lang] }}</p>
+            <p class="member__inst">{{ m["institution_" + lang] }}</p>
+          </div>
+        </div>
+        {% if m.email %}<p class="member__email"><a href="mailto:{{ m.email }}">{{ m.email }}</a></p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>

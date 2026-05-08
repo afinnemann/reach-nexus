@@ -1,0 +1,31 @@
+{# Safeguarding #}
+<section class="section">
+  <div class="container-narrow">
+    <p><a href="./">← {% if lang == "en" %}About{% else %}Sobre{% endif %}</a></p>
+    <h1>{% if lang == "en" %}Safeguarding{% else %}Salvaguarda{% endif %}</h1>
+
+    <p>
+      {% if lang == "en" %}Safeguarding covers the safety of community participants, the safety of researchers, and the integrity of data the project holds. We take all three seriously and we make our channels public so that complaints can be raised independently of the day-to-day project team.{% else %}Salvaguarda cobre a segurança das pessoas participantes da comunidade, a segurança dos pesquisadores e a integridade dos dados que o projeto detém. Levamos os três a sério e tornamos nossos canais públicos para que reclamações possam ser apresentadas de forma independente da equipe cotidiana do projeto.{% endif %}
+    </p>
+
+    <h2>{% if lang == "en" %}Researcher conduct{% else %}Conduta de pesquisadores{% endif %}</h2>
+    <p>
+      {% if lang == "en" %}All researchers — staff, students, partners — sign the project Code of Conduct on joining. The code requires informed-consent handling, respect for community norms, and an expectation of safe and harassment-free working conditions in the field. Breaches go directly to the Management Committee chair, with escalation paths to the host institution's integrity office.{% else %}Todos os pesquisadores — equipe, estudantes, parceiros — assinam o Código de Conduta do projeto ao ingressar. O código exige tratamento adequado do consentimento informado, respeito a normas comunitárias, e a expectativa de condições de trabalho seguras e livres de assédio em campo. Violações vão diretamente à coordenação do Comitê Gestor, com vias de escalonamento ao escritório de integridade da instituição anfitriã.{% endif %}
+    </p>
+
+    <h2>{% if lang == "en" %}Community grievance channel{% else %}Canal de queixas comunitárias{% endif %}</h2>
+    <p>
+      {% if lang == "en" %}Residents at any case site can raise a concern about the project — about a specific researcher, the way data are being collected, the way the community appears in public outputs, or anything else — through their Local Working Group or directly to a named ombudsperson within the consortium. The named ombudsperson rotates and is announced on the contact page.{% else %}Moradores de qualquer sítio podem apresentar uma preocupação sobre o projeto — sobre um pesquisador específico, a forma como dados são coletados, a forma como a comunidade aparece em produtos públicos, ou qualquer outra coisa — pelo seu Grupo de Trabalho Local ou diretamente a uma ouvidora nomeada do consórcio. A pessoa ouvidora alterna e é anunciada na página de contato.{% endif %}
+    </p>
+
+    <h2>{% if lang == "en" %}Field safety{% else %}Segurança em campo{% endif %}</h2>
+    <p>
+      {% if lang == "en" %}Field protocols are signed off per site by the Local Working Group before any data collection begins. They cover travel safety, working in flood-affected periods, working with elders and children, and the specific risks each site presents.{% else %}Protocolos de campo são validados por sítio pelo Grupo de Trabalho Local antes de qualquer coleta. Cobrem segurança no deslocamento, trabalho durante períodos de enchente, trabalho com idosos e crianças, e os riscos específicos de cada sítio.{% endif %}
+    </p>
+
+    <h2>{% if lang == "en" %}Data-incident response{% else %}Resposta a incidentes de dados{% endif %}</h2>
+    <p>
+      {% if lang == "en" %}If you believe project data have been mishandled, lost, or accessed inappropriately, please email <a href="mailto:{{ config.contact.general_email }}?subject=Data%20incident">{{ config.contact.general_email }}</a> with subject "Data incident". The data-protection officer at the relevant host institution will respond within five working days.{% else %}Se você acredita que dados do projeto foram mal manipulados, perdidos ou acessados inadequadamente, envie e-mail para <a href="mailto:{{ config.contact.general_email }}?subject=Incidente%20de%20dados">{{ config.contact.general_email }}</a> com o assunto "Incidente de dados". A pessoa responsável pela proteção de dados na instituição anfitriã responderá em até cinco dias úteis.{% endif %}
+    </p>
+  </div>
+</section>

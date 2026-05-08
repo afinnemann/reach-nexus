@@ -1,0 +1,14 @@
+{
+  "$schema_version": "1.0",
+  "partners": [
+    {"id": "uva", "name": "Universiteit van Amsterdam", "short": "UvA", "country": "NL", "url": "https://www.uva.nl/", "logo": "/assets/funders/uva-placeholder.svg"},
+    {"id": "amsumc", "name": "Amsterdam UMC", "short": "Amsterdam UMC", "country": "NL", "url": "https://www.amsterdamumc.org/", "logo": "/assets/funders/amsumc-placeholder.svg"},
+    {"id": "usp-fsp", "name": "School of Public Health, University of São Paulo", "short": "FSP/USP", "country": "BR", "url": "https://www.fsp.usp.br/", "logo": "/assets/funders/usp-placeholder.svg"},
+    {"id": "iee-usp", "name": "Institute of Energy and Environment, USP", "short": "IEE/USP", "country": "BR", "url": "https://www.iee.usp.br/", "logo": "/assets/funders/iee-placeholder.svg"},
+    {"id": "fgv", "name": "Getulio Vargas Foundation", "short": "FGV", "country": "BR", "url": "https://portal.fgv.br/", "logo": "/assets/funders/fgv-placeholder.svg"},
+    {"id": "fiocruz", "name": "Fiocruz Amazônia (ILMD)", "short": "Fiocruz Amazônia", "country": "BR", "url": "https://www.ilmd.fiocruz.br/", "logo": "/assets/funders/fiocruz-placeholder.svg"},
+    {"id": "alana", "name": "Instituto Alana", "short": "Alana", "country": "BR", "url": "https://alana.org.br/", "logo": "/assets/funders/alana-placeholder.svg"},
+    {"id": "ams-mun", "name": "Municipality of Amsterdam", "short": "Amsterdam", "country": "NL", "url": "https://www.amsterdam.nl/", "logo": "/assets/funders/ams-placeholder.svg"},
+    {"id": "ede-mun", "name": "Municipality of Ede", "short": "Ede", "country": "NL", "url": "https://www.ede.nl/", "logo": "/assets/funders/ede-placeholder.svg"}
+  ]
+}

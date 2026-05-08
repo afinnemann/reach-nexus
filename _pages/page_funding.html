@@ -1,0 +1,48 @@
+{# Funding & acknowledgements #}
+<section class="section">
+  <div class="container-narrow">
+    <h1>{% if lang == "en" %}Funding{% else %}Financiamento{% endif %}</h1>
+
+    <p style="font-size: var(--text-lg);">
+      {% if lang == "en" %}REACH Nexus is jointly funded by the Dutch Research Council (NWO) and the São Paulo Research Foundation (FAPESP) under the Merian Fund Cooperation Brazil – The Netherlands 2024 call <em>"Extreme Heat and Water Events: Mitigating the Adverse Health Effects of Climate Change in Cities."</em>{% else %}O REACH Nexus é financiado conjuntamente pelo Conselho Holandês de Pesquisa (NWO) e pela Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP) por meio da chamada Merian Fund Cooperação Brasil – Países Baixos 2024 <em>"Extreme Heat and Water Events: Mitigating the Adverse Health Effects of Climate Change in Cities."</em>{% endif %}
+    </p>
+
+    <h2>{% if lang == "en" %}Funders &amp; grant numbers{% else %}Financiadores e números de auxílio{% endif %}</h2>
+    <table style="width: 100%; border-collapse: collapse; max-width: 100%;">
+      <thead>
+        <tr style="text-align: left; border-bottom: 2px solid var(--color-primary);">
+          <th style="padding: var(--space-3);">{% if lang == "en" %}Funder{% else %}Financiador{% endif %}</th>
+          <th style="padding: var(--space-3);">{% if lang == "en" %}Grant number{% else %}Auxílio{% endif %}</th>
+          <th style="padding: var(--space-3);">{% if lang == "en" %}Amount{% else %}Valor{% endif %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for f in funders %}
+        <tr style="border-bottom: 1px solid var(--color-border);">
+          <td style="padding: var(--space-3);"><a href="{{ f.url }}" rel="noopener">{{ f["long_name_" + lang] }}</a></td>
+          <td style="padding: var(--space-3); font-family: var(--font-mono); font-size: var(--text-sm);">{{ f.grant_number }}</td>
+          <td style="padding: var(--space-3); font-family: var(--font-mono); font-size: var(--text-sm);">{{ f.amount or "—" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h2>{% if lang == "en" %}Acknowledgement strings for publications{% else %}Textos de agradecimento para publicações{% endif %}</h2>
+    <p>
+      {% if lang == "en" %}If you publish work that uses REACH Nexus data, infrastructure, or findings, please use the acknowledgement string for each funder whose support contributed to the work:{% else %}Se você publicar trabalho que use dados, infraestrutura ou achados do REACH Nexus, use o texto de agradecimento de cada financiador cujo apoio contribuiu para o trabalho:{% endif %}
+    </p>
+    {% for f in funders %}
+    <div class="card" style="margin-bottom: var(--space-4);">
+      <h3 style="margin-top: 0;">{{ f["long_name_" + lang] }}</h3>
+      <pre style="background: var(--color-primary-tint); padding: var(--space-4); border-radius: var(--radius); white-space: pre-wrap; font-family: var(--font-mono); font-size: var(--text-sm); line-height: 1.5; margin: 0;">{{ f["ack_" + lang] }}</pre>
+    </div>
+    {% endfor %}
+
+    <h2>{% if lang == "en" %}Partner institutions{% else %}Instituições parceiras{% endif %}</h2>
+    <ul>
+      {% for p in partners %}
+      <li><a href="{{ p.url }}" rel="noopener">{{ p.name }}</a> ({{ p.short }}, {{ p.country }})</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

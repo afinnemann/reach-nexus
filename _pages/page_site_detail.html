@@ -1,0 +1,78 @@
+{# Per-site detail page — opens with consent and partner blocks before the map #}
+<section class="section">
+  <div class="container">
+    <p><a href="./">← {% if lang == "en" %}All case sites{% else %}Todos os sítios{% endif %}</a></p>
+    <h1>{{ site["name_" + lang] }}</h1>
+    <div class="site-meta">
+      <span class="tag tag--country">{{ site.country_flag }} {{ site["city_" + lang] }}, {{ site["region_" + lang] }}</span>
+    </div>
+    <p style="font-size: var(--text-lg); color: var(--color-text-muted); max-width: 60ch;">
+      {{ site["tagline_" + lang] }}
+    </p>
+
+    <div class="consent-block" role="note" aria-labelledby="consent-{{ site.id }}">
+      <span class="consent-block__label" id="consent-{{ site.id }}">
+        {% if lang == "en" %}How this place is shown here{% else %}Como este local é representado aqui{% endif %}
+      </span>
+      <p style="margin: 0;">{{ site["consent_" + lang] }}</p>
+    </div>
+
+    <div class="partner-block">
+      <h3>{% if lang == "en" %}Local partner{% else %}Parceiro local{% endif %}</h3>
+      <p style="margin: 0;">{{ site["local_partner_" + lang] }}</p>
+    </div>
+
+    <div class="grid grid--2" style="margin-top: var(--space-12); align-items: start;">
+      <div>
+        <h2 style="margin-top: 0;">{% if lang == "en" %}About the site{% else %}Sobre o sítio{% endif %}</h2>
+        <p>{{ site["summary_" + lang] }}</p>
+
+        <h3>{% if lang == "en" %}Vulnerabilities under study{% else %}Vulnerabilidades em estudo{% endif %}</h3>
+        <ul>
+          {% for v in site["vulnerabilities_" + lang] %}
+          <li>{{ v }}</li>
+          {% endfor %}
+        </ul>
+
+        {% if site.wp_focus %}
+        <h3>{% if lang == "en" %}Linked work packages{% else %}Pacotes de trabalho vinculados{% endif %}</h3>
+        <ul>
+          {% for wp_id in site.wp_focus %}
+            {% set wp = wps | selectattr("id", "equalto", wp_id) | first %}
+            {% if wp %}
+            <li><a href="../work-packages/{{ wp.id }}.html"><strong>WP{{ wp.number }}</strong> — {{ wp["title_" + lang] }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+
+      <div>
+        <div class="map-wrap" data-reach-map data-lang="{{ lang }}" data-focus="{{ site.id }}" aria-label="{% if lang == 'en' %}Map of {{ site.name_en }}{% else %}Mapa de {{ site.name_pt }}{% endif %}">
+          <div class="map"></div>
+          <noscript>
+            <div class="map-fallback">
+              <p><strong>{{ site["name_" + lang] }}</strong> — {{ site["city_" + lang] }}, {{ site["region_" + lang] }}</p>
+              <p>{{ site.coords["precision_note_" + lang] }}</p>
+            </div>
+          </noscript>
+          <script type="application/json" data-sites>[{{ site | tojson }}]</script>
+        </div>
+        <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">
+          <strong>{% if lang == "en" %}Coordinate precision{% else %}Precisão das coordenadas{% endif %}:</strong>
+          {{ site.coords.precision }} — {{ site.coords["precision_note_" + lang] }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tinted">
+  <div class="container-narrow">
+    <h2>{% if lang == "en" %}Get involved{% else %}Participe{% endif %}</h2>
+    <p>
+      {% if lang == "en" %}Community participation is at the heart of the citizen-science work in WP4. If you live in {{ site.city_en }} and want to join, or if you represent a community organisation interested in collaborating, please reach out via the project contact below.{% else %}A participação comunitária está no centro do trabalho de ciência cidadã no WP4. Se você mora em {{ site.city_pt }} e quer participar, ou se representa uma organização comunitária interessada em colaborar, entre em contato pelo formulário abaixo.{% endif %}
+    </p>
+    <p><a class="btn btn--primary" href="../contact.html">{% if lang == "en" %}Contact the project{% else %}Entre em contato{% endif %} →</a></p>
+  </div>
+</section>

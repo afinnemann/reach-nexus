@@ -1,0 +1,35 @@
+{# Sites overview page #}
+<section class="section">
+  <div class="container">
+    <h1>{% if lang == "en" %}Case sites{% else %}Sítios de estudo{% endif %}</h1>
+    <p style="font-size: var(--text-lg); max-width: 60ch;">
+      {% if lang == "en" %}Four contrasting urban communities — two in Brazil, two in the Netherlands.{% else %}Quatro comunidades urbanas contrastantes — duas no Brasil, duas nos Países Baixos.{% endif %}
+    </p>
+
+    <div class="map-wrap" data-reach-map data-lang="{{ lang }}" style="margin: var(--space-8) 0;" aria-label="{% if lang == 'en' %}Map of the four case sites{% else %}Mapa dos quatro sítios{% endif %}">
+      <div class="map" id="map-sites"></div>
+      <noscript>
+        <div class="map-fallback">
+          <ul>
+            {% for s in sites %}
+            <li><strong>{{ s["name_" + lang] }}</strong> — {{ s["city_" + lang] }}, {{ s["region_" + lang] }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </noscript>
+      <script type="application/json" data-sites>{{ sites | tojson }}</script>
+    </div>
+    <div class="grid grid--2" style="margin-top: var(--space-8);">
+      {% for s in sites %}
+      <article class="card">
+        <div class="site-meta">
+          <span class="tag tag--country">{{ s.country_flag }} {{ s["city_" + lang] }}</span>
+        </div>
+        <h2 style="margin-top: 0;"><a href="{{ s.id }}.html">{{ s["name_" + lang] }}</a></h2>
+        <p style="color: var(--color-text-muted);">{{ s["tagline_" + lang] }}</p>
+        <p><a href="{{ s.id }}.html">{% if lang == "en" %}Read more{% else %}Saiba mais{% endif %} →</a></p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
