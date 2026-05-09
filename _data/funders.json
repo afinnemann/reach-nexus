@@ -25,18 +25,6 @@
       "logo": "/assets/funders/fapesp-placeholder.svg",
       "ack_en": "This work is supported by the São Paulo Research Foundation (FAPESP) under grant [TBC] within the FAPESP–NWO Cooperation Brazil–The Netherlands 2024 call \"Extreme Heat and Water Events.\"",
       "ack_pt": "Este trabalho conta com o apoio da Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP) sob o auxílio [TBC], no âmbito da chamada FAPESP–NWO Cooperação Brasil–Países Baixos 2024 \"Extreme Heat and Water Events.\""
-    },
-    {
-      "id": "merian",
-      "name": "Merian Fund",
-      "long_name_en": "Merian Fund · Cooperation Brazil – The Netherlands",
-      "long_name_pt": "Merian Fund · Cooperação Brasil – Países Baixos",
-      "grant_number": "Cooperation Brazil – The Netherlands 2024",
-      "amount": null,
-      "url": "https://www.nwo.nl/en/researchprogrammes/merian-fund",
-      "logo": "/assets/funders/merian-placeholder.svg",
-      "ack_en": "Funded under the Merian Fund Cooperation Brazil – The Netherlands 2024 programme.",
-      "ack_pt": "Financiado pelo programa Merian Fund Cooperação Brasil – Países Baixos 2024."
     }
   ]
 }

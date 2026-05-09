@@ -1,0 +1,45 @@
+{# Data sources page #}
+<section class="section">
+  <div class="container">
+    <h1>{% if lang == "en" %}Data sources{% else %}Fontes de dados{% endif %}</h1>
+    <p style="font-size: var(--text-lg); max-width: 65ch;">
+      {% if lang == "en" %}A curated catalogue of openly accessible environmental and health datasets for São Paulo and the Netherlands — built so that the consortium teams can locate authoritative sources at a glance, compare resolution, period and licence, and trace which environmental datasets can be joined to health-outcome anchors.{% else %}Um catálogo curado de conjuntos de dados ambientais e de saúde de acesso aberto para São Paulo e os Países Baixos — construído para que as equipes do consórcio possam localizar fontes autoritativas, comparar resolução, período e licença, e rastrear quais conjuntos ambientais podem ser ligados a desfechos de saúde.{% endif %}
+    </p>
+
+    <div class="dashboard-page" style="margin-top: var(--space-8);">
+      <section class="dashboard-hero" id="data-about">
+        <h2>{% if lang == "en" %}What this is{% else %}O que é isto{% endif %}</h2>
+        <p>{% if lang == "en" %}Each card below describes one dataset: who publishes it, what it covers, how to access it, and a short R snippet for fetching a small illustrative slice. Use the filters to narrow by country or domain.{% else %}Cada card abaixo descreve um conjunto de dados: quem o publica, o que cobre, como acessá-lo, e um pequeno trecho em R para buscar uma fatia ilustrativa. Use os filtros para restringir por país ou domínio.{% endif %}</p>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted);">{% if lang == "en" %}Source registry maintained at <a href="https://github.com/afinnemann/brazil_nl_env_data" rel="noopener">github.com/afinnemann/brazil_nl_env_data</a>. Cards are curated; flagged entries are pending consortium consultation.{% else %}Registro mantido em <a href="https://github.com/afinnemann/brazil_nl_env_data" rel="noopener">github.com/afinnemann/brazil_nl_env_data</a>. Os cards são curados; entradas marcadas estão pendentes de consulta ao consórcio.{% endif %}</p>
+        <div class="stats">
+          <div><b id="stat-cards">10</b>{% if lang == "en" %}datasets{% else %}conjuntos{% endif %}</div>
+          <div><b>2</b>{% if lang == "en" %}countries{% else %}países{% endif %}</div>
+          <div><b id="stat-updated">2026-05-08</b>{% if lang == "en" %}last updated{% else %}última atualização{% endif %}</div>
+        </div>
+      </section>
+
+      <div class="filters">
+        <button class="filter-btn country-btn active" data-country="all">{% if lang == "en" %}All countries{% else %}Todos os países{% endif %}</button>
+        <button class="filter-btn country-btn" data-country="BR">{% if lang == "en" %}Brazil{% else %}Brasil{% endif %}</button>
+        <button class="filter-btn country-btn" data-country="NL">{% if lang == "en" %}Netherlands{% else %}Países Baixos{% endif %}</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-domain="all">{% if lang == "en" %}All domains{% else %}Todos os domínios{% endif %}</button>
+        <button class="filter-btn" data-domain="pollution">{% if lang == "en" %}Air pollution{% else %}Poluição do ar{% endif %}</button>
+        <button class="filter-btn" data-domain="heat">{% if lang == "en" %}Heat &amp; climate{% else %}Calor e clima{% endif %}</button>
+        <button class="filter-btn" data-domain="rain">{% if lang == "en" %}Rain{% else %}Chuva{% endif %}</button>
+        <button class="filter-btn" data-domain="health">{% if lang == "en" %}Health outcomes{% else %}Desfechos de saúde{% endif %}</button>
+      </div>
+
+      <div id="dashboard-cards" class="dash-cards">
+        <p style="color: var(--color-text-muted)">{% if lang == "en" %}Loading datasets…{% else %}Carregando conjuntos…{% endif %}</p>
+      </div>
+      <noscript>
+        <p style="color: var(--color-accent-dark); margin-top: var(--space-4);">
+          {% if lang == "en" %}This page needs JavaScript to filter and expand dataset details. The underlying registry is openly available at <a href="https://github.com/afinnemann/brazil_nl_env_data">github.com/afinnemann/brazil_nl_env_data</a>.{% else %}Esta página precisa de JavaScript para filtrar e expandir os detalhes dos conjuntos de dados. O registro está disponível em <a href="https://github.com/afinnemann/brazil_nl_env_data">github.com/afinnemann/brazil_nl_env_data</a>.{% endif %}
+        </p>
+      </noscript>
+    </div>
+  </div>
+</section>

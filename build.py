@@ -79,7 +79,6 @@ def url_set(lang: str, base_path: str = "") -> dict[str, str]:
         "news_url": base + "news.html",
         "accessibility_url": base + "accessibility.html",
         "funding_url": base + "funding.html",
-        "approach_url": base + "approach.html",
         "outputs_url": base + "outputs.html",
     }
 
@@ -88,12 +87,12 @@ def nav_for(lang: str, current: str, base_path: str = "") -> list[dict[str, Any]
     base = f"{base_path}/{lang}/"
     items = [
         ("home", base, "Home", "Início"),
+        ("about", base + "about/", "About", "Sobre"),
         ("sites", base + "sites/", "Sites", "Sítios"),
         ("wp", base + "work-packages/", "Work packages", "Pacotes de trabalho"),
         ("team", base + "team.html", "Team", "Equipe"),
-        ("approach", base + "approach.html", "Approach", "Abordagem"),
+        ("data", base + "data.html", "Data", "Dados"),
         ("news", base + "news.html", "Project log", "Diário"),
-        ("about", base + "about/", "About", "Sobre"),
     ]
     return [
         {"href": href, "label": (label_en if lang == "en" else label_pt), "current": (key == current)}
@@ -140,7 +139,7 @@ def make_env() -> Environment:
 
 def render_page(env, *, lang, page_key, body_template, body_ctx, out_path,
                 page_title, page_description,
-                needs_leaflet=False, include_funder_strip=True,
+                needs_leaflet=False, needs_dashboard=False, include_funder_strip=True,
                 project, funders, last_updated, base_path=""):
     body_html = env.get_template(body_template).render(**body_ctx)
     urls = url_set(lang, base_path=base_path)
@@ -164,6 +163,7 @@ def render_page(env, *, lang, page_key, body_template, body_ctx, out_path,
         funders=funders,
         include_funder_strip=include_funder_strip,
         needs_leaflet=needs_leaflet,
+        needs_dashboard=needs_dashboard,
         last_updated=last_updated,
         canonical=canonical,
         default_canonical=default_canonical,
@@ -302,19 +302,21 @@ def build(check_only: bool = False) -> None:
                 page_title=(title_en if lang == "en" else title_pt),
                 page_description=(title_en if lang == "en" else title_pt), project=project, funders=funders, last_updated=last_updated, base_path=base_path)
 
-        # 7) Approach (prior publications stub)
+        # 7b) Data sources dashboard
         render_page(env,
-            lang=lang, page_key="approach",
-            body_template="page_approach.html",
-            body_ctx={"members": team_doc["members"], "config": config_doc, "lang": lang, "alt_path": "approach.html"},
-            out_path=ROOT / lang / "approach.html",
-            page_title=("Approach &amp; references" if lang == "en" else "Abordagem e referências"),
-            page_description=("Conceptual framing and prior publications grounding the project." if lang == "en"
-                              else "Enquadramento conceitual e publicações anteriores que fundamentam o projeto."), project=project, funders=funders, last_updated=last_updated, base_path=base_path)
+            lang=lang, page_key="data",
+            body_template="page_data.html",
+            body_ctx={"config": config_doc, "lang": lang, "alt_path": "data.html"},
+            out_path=ROOT / lang / "data.html",
+            page_title=("Data sources" if lang == "en" else "Fontes de dados"),
+            page_description=("Curated catalogue of openly accessible environmental and health datasets for São Paulo and the Netherlands." if lang == "en"
+                              else "Catálogo curado de conjuntos de dados ambientais e de saúde de acesso aberto para São Paulo e os Países Baixos."),
+            needs_dashboard=True,
+            project=project, funders=funders, last_updated=last_updated, base_path=base_path)
 
         # 8) Outputs
         render_page(env,
-            lang=lang, page_key="approach",
+            lang=lang, page_key="about",
             body_template="page_outputs.html",
             body_ctx={"config": config_doc, "lang": lang, "alt_path": "outputs.html"},
             out_path=ROOT / lang / "outputs.html",
@@ -409,7 +411,7 @@ def write_sitemap(config: dict[str, Any], base_path: str = "") -> None:
             "", "sites/", "team.html", "work-packages/",
             "about/", "about/governance.html", "about/ethics.html", "about/data.html",
             "about/ai-use.html", "about/safeguarding.html", "about/archival.html",
-            "approach.html", "outputs.html", "vacancies.html", "news.html",
+            "data.html", "outputs.html", "vacancies.html", "news.html",
             "funding.html", "contact.html", "accessibility.html",
         ):
             urls.append(f"{base}/{lang}/{path}")

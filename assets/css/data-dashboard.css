@@ -1,0 +1,209 @@
+/* REACH Nexus — data-dashboard.css
+ * Adapted from brazil_nl_env_data/docs/index.html (the Environmental Data
+ * Dashboard, starter set v0.1). All selectors are scoped under
+ * `.dashboard-page` so they cannot collide with the rest of the REACH Nexus
+ * stylesheet. Colours read from tokens.css. */
+
+.dashboard-page {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+
+.dashboard-page .dashboard-hero {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-5) var(--space-6);
+  margin-bottom: var(--space-6);
+}
+.dashboard-page .dashboard-hero h2 {
+  font-size: var(--text-xl);
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+}
+.dashboard-page .dashboard-hero p {
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: var(--space-2);
+}
+.dashboard-page .dashboard-hero .stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--color-border);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+.dashboard-page .dashboard-hero .stats b {
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  display: block;
+}
+
+.dashboard-page .filters {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+.dashboard-page .filter-btn {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border-strong);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 14px;
+  font-size: var(--text-xs);
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color var(--t-fast) ease, background var(--t-fast) ease;
+}
+.dashboard-page .filter-btn:hover { border-color: var(--color-callout); }
+.dashboard-page .filter-btn.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.dashboard-page .dash-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.dashboard-page .dash-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-4) var(--space-5);
+  transition: box-shadow var(--t-fast) ease;
+}
+.dashboard-page .dash-card:hover { box-shadow: var(--shadow-sm); }
+
+.dashboard-page .card-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.dashboard-page .card-head h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin: 0;
+  font-family: var(--font-display);
+}
+.dashboard-page .card-id {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.dashboard-page .chip {
+  display: inline-block;
+  padding: 2px var(--space-2);
+  border-radius: 10px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+.dashboard-page .chip-flag {
+  background: var(--color-surface-warm);
+  color: var(--color-accent-dark);
+}
+.dashboard-page .chip-domain {
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+.dashboard-page .chip-access-open {
+  background: #e1f0e3;
+  color: #2c6e3a;
+}
+.dashboard-page .chip-access-auth {
+  background: #fde9c8;
+  color: #8a5a18;
+}
+.dashboard-page .chip-access-restricted {
+  background: #fbe1e2;
+  color: var(--color-accent-dark);
+}
+
+.dashboard-page .card-purpose {
+  color: var(--color-text);
+  margin: var(--space-2) 0;
+  line-height: 1.5;
+}
+
+.dashboard-page .card-meta {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+  padding: 0;
+}
+.dashboard-page .card-meta dt { font-weight: 600; color: var(--color-text-muted); }
+.dashboard-page .card-meta dd { margin: 0; }
+
+.dashboard-page .card-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+}
+.dashboard-page .dash-btn {
+  background: var(--color-primary);
+  color: #fff;
+  padding: var(--space-1) var(--space-3);
+  border: 0;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background var(--t-fast) ease;
+}
+.dashboard-page .dash-btn:hover { background: var(--color-primary-dark); color: #fff; }
+.dashboard-page .dash-btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+.dashboard-page .dash-btn-secondary:hover { background: var(--color-primary-tint); }
+
+.dashboard-page .drawer {
+  display: none;
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--color-border);
+}
+.dashboard-page .drawer.open { display: block; }
+.dashboard-page .drawer h4 {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: var(--space-3) 0 var(--space-1);
+  letter-spacing: 0.05em;
+  font-family: var(--font-body);
+}
+.dashboard-page .drawer pre {
+  background: #1d3a40;
+  color: var(--color-surface-warm);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  overflow-x: auto;
+  line-height: 1.5;
+  font-family: var(--font-mono);
+}
+.dashboard-page .drawer p, .dashboard-page .drawer li {
+  font-size: var(--text-xs);
+  color: var(--color-text);
+  line-height: 1.55;
+}
+.dashboard-page .drawer ul {
+  padding-left: 18px;
+  margin: 4px 0;
+}

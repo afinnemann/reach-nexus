@@ -10,7 +10,7 @@
     </p>
     <p>
       <a class="btn btn--primary" href="sites/">{% if lang == "en" %}Explore the case sites{% else %}Conheça os sítios{% endif %} →</a>
-      <a class="btn btn--ghost" href="approach.html">{% if lang == "en" %}Read the approach{% else %}Leia a abordagem{% endif %}</a>
+      <a class="btn btn--ghost" href="work-packages/">{% if lang == "en" %}Work packages{% else %}Pacotes de trabalho{% endif %}</a>
     </p>
 
     <div class="hero__sites-grid" aria-label="{% if lang == 'en' %}Case sites{% else %}Sítios{% endif %}">
@@ -36,7 +36,7 @@
   <div class="container">
     <h2 id="map-heading">{% if lang == "en" %}Where the work happens{% else %}Onde o trabalho acontece{% endif %}</h2>
     <p style="max-width: 60ch;">
-      {% if lang == "en" %}Markers show approximate, partner-agreed locations only. We do not display household-level coordinates for any site, and we use city-level resolution where requested by community partners.{% else %}Os marcadores mostram apenas localizações aproximadas e acordadas com os parceiros. Não exibimos coordenadas em nível domiciliar em nenhum sítio, e usamos resolução em nível de cidade quando solicitado pelos parceiros comunitários.{% endif %}
+      {% if lang == "en" %}Overview of four case studies.{% else %}Visão geral dos quatro estudos de caso.{% endif %}
     </p>
     <div class="map-wrap" data-reach-map data-lang="{{ lang }}" aria-label="{% if lang == 'en' %}Map of the four case sites{% else %}Mapa dos quatro sítios{% endif %}">
       <div class="map" id="map"></div>

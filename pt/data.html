@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Abordagem e referências · REACH Nexus</title>
-  <meta name="description" content="Enquadramento conceitual e publicações anteriores que fundamentam o projeto.">
+  <title>Fontes de dados · REACH Nexus</title>
+  <meta name="description" content="Catálogo curado de conjuntos de dados ambientais e de saúde de acesso aberto para São Paulo e os Países Baixos.">
 
-  <link rel="canonical" href="https://afinnemann.github.io/reach-nexus/pt/approach.html">
-<link rel="alternate" hreflang="en" href="/reach-nexus/en/approach.html">  <link rel="alternate" hreflang="pt" href="https://afinnemann.github.io/reach-nexus/pt/approach.html">
-  <link rel="alternate" hreflang="x-default" href="https://afinnemann.github.io/reach-nexus/en/approach.html">
+  <link rel="canonical" href="https://afinnemann.github.io/reach-nexus/pt/data.html">
+<link rel="alternate" hreflang="en" href="/reach-nexus/en/data.html">  <link rel="alternate" hreflang="pt" href="https://afinnemann.github.io/reach-nexus/pt/data.html">
+  <link rel="alternate" hreflang="x-default" href="https://afinnemann.github.io/reach-nexus/en/data.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Abordagem e referências · REACH Nexus">
-  <meta property="og:description" content="Enquadramento conceitual e publicações anteriores que fundamentam o projeto.">
+  <meta property="og:title" content="Fontes de dados · REACH Nexus">
+  <meta property="og:description" content="Catálogo curado de conjuntos de dados ambientais e de saúde de acesso aberto para São Paulo e os Países Baixos.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://afinnemann.github.io/reach-nexus/pt/approach.html">
+  <meta property="og:url" content="https://afinnemann.github.io/reach-nexus/pt/data.html">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="REACH Nexus">
 
@@ -27,7 +27,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/reach-nexus/assets/css/tokens.css">
   <link rel="stylesheet" href="/reach-nexus/assets/css/styles.css">
-</head>
+<link rel="stylesheet" href="/reach-nexus/assets/css/data-dashboard.css"></head>
 <body>
   <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
 
@@ -39,15 +39,15 @@
       </a>
       <nav class="nav" role="navigation" aria-label="Principal">
           <a href="/reach-nexus/pt/">Início</a>
+          <a href="/reach-nexus/pt/about/">Sobre</a>
           <a href="/reach-nexus/pt/sites/">Sítios</a>
           <a href="/reach-nexus/pt/work-packages/">Pacotes de trabalho</a>
           <a href="/reach-nexus/pt/team.html">Equipe</a>
-          <a href="/reach-nexus/pt/approach.html" aria-current="page">Abordagem</a>
+          <a href="/reach-nexus/pt/data.html" aria-current="page">Dados</a>
           <a href="/reach-nexus/pt/news.html">Diário</a>
-          <a href="/reach-nexus/pt/about/">Sobre</a>
         <span class="lang-switch" role="navigation" aria-label="Idioma">
-          <a href="/reach-nexus/en/approach.html" hreflang="en">EN</a>
-          <a href="/reach-nexus/pt/approach.html" aria-current="true" hreflang="pt">PT</a>
+          <a href="/reach-nexus/en/data.html" hreflang="en">EN</a>
+          <a href="/reach-nexus/pt/data.html" aria-current="true" hreflang="pt">PT</a>
         </span>
       </nav>
     </div>
@@ -55,34 +55,45 @@
 
   <main id="main" role="main">
     <section class="section">
-  <div class="container-narrow">
-    <h1>Abordagem e referências</h1>
+  <div class="container">
+    <h1>Fontes de dados</h1>
+    <p style="font-size: var(--text-lg); max-width: 65ch;">
+Um catálogo curado de conjuntos de dados ambientais e de saúde de acesso aberto para São Paulo e os Países Baixos — construído para que as equipes do consórcio possam localizar fontes autoritativas, comparar resolução, período e licença, e rastrear quais conjuntos ambientais podem ser ligados a desfechos de saúde.    </p>
 
-    <p style="font-size: var(--text-lg);">
-O REACH Nexus reúne planejamento urbano, saúde pública, direito ambiental, psicologia clínica e modelagem de sistemas em um único programa comparativo. Os quatro casos não são apenas cenários — são o desenho da pesquisa.    </p>
+    <div class="dashboard-page" style="margin-top: var(--space-8);">
+      <section class="dashboard-hero" id="data-about">
+        <h2>O que é isto</h2>
+        <p>Cada card abaixo descreve um conjunto de dados: quem o publica, o que cobre, como acessá-lo, e um pequeno trecho em R para buscar uma fatia ilustrativa. Use os filtros para restringir por país ou domínio.</p>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted);">Registro mantido em <a href="https://github.com/afinnemann/brazil_nl_env_data" rel="noopener">github.com/afinnemann/brazil_nl_env_data</a>. Os cards são curados; entradas marcadas estão pendentes de consulta ao consórcio.</p>
+        <div class="stats">
+          <div><b id="stat-cards">10</b>conjuntos</div>
+          <div><b>2</b>países</div>
+          <div><b id="stat-updated">2026-05-08</b>última atualização</div>
+        </div>
+      </section>
 
-    <h2>Enquadramento conceitual</h2>
-    <p>
-O projeto adota uma <em>perspectiva sistêmica sobre a policrise</em> — o entrelaçamento entre mudança climática, desigualdade urbana e fragilidade do sistema de saúde. Usamos conceitos de saúde planetária em diálogo com arcabouços emergentes de "nexo", e trabalhamos a partir de vulnerabilidades em cascata para encontrar pontos de intervenção que tratem causas-raiz, não sintomas.    </p>
+      <div class="filters">
+        <button class="filter-btn country-btn active" data-country="all">Todos os países</button>
+        <button class="filter-btn country-btn" data-country="BR">Brasil</button>
+        <button class="filter-btn country-btn" data-country="NL">Países Baixos</button>
+      </div>
 
-    <h2>Métodos</h2>
-    <ul>
-      <li><strong>Diagramas de loops causais e modelos baseados em agentes</strong> (WP2) — estruturas específicas por sítio, refinadas iterativamente com dados de ciência cidadã.</li>
-      <li><strong>Avaliação de capacidade do sistema de saúde</strong> (WP3) — dados secundários sobre doenças climato-sensíveis, levantamentos de saúde mental após eventos extremos, avaliação de atenção primária.</li>
-      <li><strong>Co-pesquisa em ciência cidadã</strong> (WP4) — oficinas participativas e ferramentas móveis de coleta que capturam a experiência vivida durante e após eventos climáticos extremos.</li>
-      <li><strong>Intervenções em laboratórios vivos</strong> (WP5) — uma intervenção piloto brasileira e uma holandesa informadas pelo modelo comparativo.</li>
-    </ul>
+      <div class="filters">
+        <button class="filter-btn active" data-domain="all">Todos os domínios</button>
+        <button class="filter-btn" data-domain="pollution">Poluição do ar</button>
+        <button class="filter-btn" data-domain="heat">Calor e clima</button>
+        <button class="filter-btn" data-domain="rain">Chuva</button>
+        <button class="filter-btn" data-domain="health">Desfechos de saúde</button>
+      </div>
 
-    <h2>Publicações anteriores selecionadas</h2>
-    <p style="color: var(--color-text-muted); font-size: var(--text-sm);">
-Esta lista será confirmada com os PIs do consórcio antes do lançamento público. Abaixo segue uma estrutura provisória mostrando o que aparecerá aqui.    </p>
-    <ul>
-      <li>Wiers <em>et al.</em> — duas a três publicações que fundamentam a modelagem e o enquadramento de saúde mental do projeto.</li>
-      <li>Giatti, Jacobi, Nicolletti — duas a três publicações sobre justiça ambiental, ciência cidadã e sistemas de saúde pública em contextos urbanos brasileiros.</li>
-      <li>Harris, Bockting, Nollkaemper, Willems — publicações que ancoram os componentes de sistemas de saúde, saúde mental, direito ambiental e planejamento urbano.</li>
-    </ul>
-    <p>
-Produtos do próprio REACH Nexus aparecem na página de <a href="outputs.html">Produtos</a> conforme o projeto os gera.    </p>
+      <div id="dashboard-cards" class="dash-cards">
+        <p style="color: var(--color-text-muted)">Carregando conjuntos…</p>
+      </div>
+      <noscript>
+        <p style="color: var(--color-accent-dark); margin-top: var(--space-4);">
+Esta página precisa de JavaScript para filtrar e expandir os detalhes dos conjuntos de dados. O registro está disponível em <a href="https://github.com/afinnemann/brazil_nl_env_data">github.com/afinnemann/brazil_nl_env_data</a>.        </p>
+      </noscript>
+    </div>
   </div>
 </section>
 
@@ -94,7 +105,6 @@ Produtos do próprio REACH Nexus aparecem na página de <a href="outputs.html">P
       <div class="funder-strip__row">
         <a class="funder-strip__item" href="https://www.nwo.nl/" rel="noopener">Conselho Holandês de Pesquisa (NWO)</a>
         <a class="funder-strip__item" href="https://fapesp.br/" rel="noopener">Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)</a>
-        <a class="funder-strip__item" href="https://www.nwo.nl/en/researchprogrammes/merian-fund" rel="noopener">Merian Fund · Cooperação Brasil – Países Baixos</a>
       </div>
       <p style="margin-top: var(--space-4); font-size: var(--text-sm); opacity: 0.85;">
         <a href="/reach-nexus/pt/funding.html">Detalhes de financiamento, números de auxílio e textos de agradecimento →</a>
@@ -144,10 +154,10 @@ Produtos do próprio REACH Nexus aparecem na página de <a href="outputs.html">P
       </div>
       <div class="site-footer__bottom">
         <span>© 2026 REACH Nexus consortium. Conteúdo sob licença CC BY 4.0; código do site sob licença MIT.</span>
-        <span>Última atualização: <time datetime="2026-05-08">2026-05-08</time></span>
+        <span>Última atualização: <time datetime="2026-05-09">2026-05-09</time></span>
       </div>
     </div>
   </footer>
 
-</body>
+<script src="/reach-nexus/assets/js/data-dashboard.js" defer></script></body>
 </html>

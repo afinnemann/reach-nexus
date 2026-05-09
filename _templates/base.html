@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="{{ base_path }}/assets/css/tokens.css">
   <link rel="stylesheet" href="{{ base_path }}/assets/css/styles.css">
   {% if needs_leaflet %}<link rel="stylesheet" href="{{ base_path }}/assets/vendor/leaflet-1.9.4/leaflet.css">{% endif %}
+  {% if needs_dashboard %}<link rel="stylesheet" href="{{ base_path }}/assets/css/data-dashboard.css">{% endif %}
 </head>
 <body>
   <a href="#main" class="skip-link">{{ "Skip to main content" if lang == "en" else "Pular para o conteúdo principal" }}</a>
@@ -120,5 +121,6 @@
 
   {% if needs_leaflet %}<script src="{{ base_path }}/assets/vendor/leaflet-1.9.4/leaflet.js" defer></script>
   <script src="{{ base_path }}/assets/js/map.js" defer></script>{% endif %}
+  {% if needs_dashboard %}<script src="{{ base_path }}/assets/js/data-dashboard.js" defer></script>{% endif %}
 </body>
 </html>
