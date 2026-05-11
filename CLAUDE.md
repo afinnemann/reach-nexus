@@ -4,7 +4,7 @@ You are working on the public website for the **REACH Nexus** research consortiu
 
 ## Project
 
-REACH Nexus (formal: *Urban Climate Health Nexus*, UCH-Nexus) is a five-year Dutch–Brazilian research consortium, 1 May 2026 → 2031. Funded by NWO and FAPESP under the Merian Fund. Co-led by Reinout Wiers (UvA) and Leandro Giatti (USP). Four case sites:
+REACH Nexus — **R**esilience to **E**xtreme weather: **A**dvancing **C**limate-**H**ealth Nexus — is a five-year Dutch–Brazilian research consortium, 1 May 2026 → 2031. Formal/proposal title is *Urban Climate Health Nexus* (UCH-Nexus). REACH Nexus is the public brand; UCH-Nexus is the funder/grant-database name. Funded by NWO and FAPESP under the Merian Fund. Co-led by Reinout Wiers (UvA) and Leandro Giatti (USP). Four case sites:
 
 | Site | City | Country |
 |------|------|---------|
