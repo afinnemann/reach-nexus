@@ -141,6 +141,9 @@ def render_page(env, *, lang, page_key, body_template, body_ctx, out_path,
                 page_title, page_description,
                 needs_leaflet=False, needs_dashboard=False, include_funder_strip=True,
                 project, funders, last_updated, base_path=""):
+    # Make base_path / asset_root available inside body templates too
+    # (needed for asset references like images embedded in page bodies).
+    body_ctx = {**body_ctx, "base_path": base_path, "asset_root": f"{base_path}/"}
     body_html = env.get_template(body_template).render(**body_ctx)
     urls = url_set(lang, base_path=base_path)
     nav_items = nav_for(lang, page_key, base_path=base_path)
@@ -182,7 +185,7 @@ def render_page(env, *, lang, page_key, body_template, body_ctx, out_path,
 # Build pipeline
 # ---------------------------------------------------------------------------
 
-def build(check_only: bool = False) -> None:
+def build(check_only: bool = False, local: bool = False) -> None:
     sites_doc = load_json("sites")
     team_doc = load_json("team")
     wps_doc = load_json("wps")
@@ -202,10 +205,14 @@ def build(check_only: bool = False) -> None:
     project["github"] = config_doc["contact"]["github"]
     funders = funders_doc["funders"]
     last_updated = dt.date.today().isoformat()
-    base_path = config_doc["deploy"].get("base_path", "").rstrip("/")
-    if base_path and not base_path.startswith("/"):
-        base_path = "/" + base_path
-    print(f"[build] base_path = {base_path!r}")
+    if local:
+        base_path = ""
+        print("[build] --local mode: base_path overridden to '' for http://localhost:8000/en/ preview")
+    else:
+        base_path = config_doc["deploy"].get("base_path", "").rstrip("/")
+        if base_path and not base_path.startswith("/"):
+            base_path = "/" + base_path
+        print(f"[build] base_path = {base_path!r}")
 
     for lang in LANGS:
         print(f"[build] rendering /{lang}/ ...")
@@ -430,5 +437,8 @@ def write_sitemap(config: dict[str, Any], base_path: str = "") -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="validate JSON schemas without writing.")
+    parser.add_argument("--local", action="store_true",
+        help="build with base_path='' for local file:// or http://localhost:8000/ preview. "
+             "Do not commit the output of a --local build; rebuild without --local before pushing.")
     args = parser.parse_args()
-    build(check_only=args.check)
+    build(check_only=args.check, local=args.local)

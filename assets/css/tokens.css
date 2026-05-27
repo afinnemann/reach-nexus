@@ -8,13 +8,13 @@
      Golden + light yellow are demoted to surfaces / callouts only. */
   --color-primary:        #335c67;   /* dark blue — header, primary buttons, links */
   --color-primary-dark:   #234048;   /* hover states */
-  --color-primary-tint:   #e3ebed;   /* subtle background tint */
+  --color-primary-tint:   #e9e0cf;   /* oak-shadow tint — section dividers, sticky header bg, code-bg, partner block (warm v1, was #e3ebed) */
   --color-accent:         #9e2a2b;   /* single hot accent — living-lab markers, key CTAs */
   --color-accent-dark:    #540b0e;   /* hover state on accent */
-  --color-callout:        #e09f3e;   /* golden — used sparingly for highlight callouts */
-  --color-surface-warm:   #fff7d6;   /* light yellow — section dividers, callout boxes */
+  --color-callout:        #c8854a;   /* warm ochre — used sparingly for highlight callouts (warm v1, was #e09f3e) */
+  --color-surface-warm:   #f9ebcd;   /* parchment — section dividers, callout boxes (warm v1, was #fff7d6) */
 
-  --color-bg:             #fafaf7;   /* near-white base */
+  --color-bg:             #f5f1ea;   /* linen — page background (warm v1, was #fafaf7) */
   --color-surface:        #ffffff;   /* cards */
   --color-text:           #1f2730;   /* body text */
   --color-text-muted:     #5b6770;   /* meta, captions */

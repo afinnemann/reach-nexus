@@ -5,7 +5,7 @@
     <h1 id="hero-heading" class="hero__title">
       {{ config.project.name_short }}
     </h1>
-    <p class="hero__subtitle"><span class="acro">R</span>esilience to <span class="acro">E</span>xtreme weather: <span class="acro">A</span>dvancing <span class="acro">C</span>limate-<span class="acro">H</span>ealth Nexus</p>
+    <p class="hero__subtitle">Resilience to Extreme weather: Advancing Climate-Health Nexus</p>
     <p class="hero__lede">
       {{ config.project["tagline_" + lang] }}
     </p>
@@ -13,6 +13,11 @@
       <a class="btn btn--primary" href="sites/">{% if lang == "en" %}Explore the case sites{% else %}Conheça os sítios{% endif %} →</a>
       <a class="btn btn--ghost" href="work-packages/">{% if lang == "en" %}Work packages{% else %}Pacotes de trabalho{% endif %}</a>
     </p>
+
+    <figure class="hero__feature">
+      <img src="{{ asset_root }}assets/img/jardim-pantanal-mural.jpg" alt="{% if lang == 'en' %}Mural of children playing in the rain by the Tietê river, painted on a wall in Jardim Pantanal, São Paulo.{% else %}Mural de crianças brincando na chuva à beira do Rio Tietê, pintado em um muro do Jardim Pantanal, São Paulo.{% endif %}" loading="lazy">
+      <figcaption>{% if lang == "en" %}Mural at Jardim Pantanal, São Paulo · <a href="https://www.instagram.com/sprart1/" rel="noopener">@sprart1</a>, 2026{% else %}Mural no Jardim Pantanal, São Paulo · <a href="https://www.instagram.com/sprart1/" rel="noopener">@sprart1</a>, 2026{% endif %}</figcaption>
+    </figure>
 
     <div class="hero__sites-grid" aria-label="{% if lang == 'en' %}Case sites{% else %}Sítios{% endif %}">
       {% for s in sites %}
