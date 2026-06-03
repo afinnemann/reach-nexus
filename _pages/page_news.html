@@ -11,7 +11,14 @@
       <li>
         <div class="log-entry__date"><time datetime="{{ entry.date }}">{{ entry.date }}</time></div>
         <h2 class="log-entry__title">{{ entry["title_" + lang] }}</h2>
-        <p>{{ entry["body_" + lang] }}</p>
+        {% if entry.image %}
+        <figure class="log-entry__image">
+          <img src="{{ asset_root }}assets/img/news/{{ entry.image }}" alt="{{ entry['image_alt_' + lang] or entry['image_alt_en'] or '' }}" loading="lazy">
+        </figure>
+        {% endif %}
+        {% for para in entry["body_" + lang].split("\n\n") %}
+        <p>{{ para }}</p>
+        {% endfor %}
         {% if entry.tags %}
         <div class="log-entry__tags">
           {% for t in entry.tags %}<span class="tag tag--country">{{ t }}</span>{% endfor %}

@@ -113,7 +113,7 @@ main { display: block; }
   text-decoration: none;
   display: inline-flex; align-items: baseline; gap: var(--space-2);
 }
-.brand__mark { color: var(--color-accent); }
+.brand__mark { color: inherit; }
 .brand__sub { font-size: var(--text-xs); color: var(--color-text-muted); font-family: var(--font-body); font-weight: 400; letter-spacing: 0; }
 
 .nav { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); }
@@ -173,22 +173,31 @@ main { display: block; }
   max-width: 62ch;
   margin-bottom: var(--space-8);
 }
-.hero__feature {
-  margin: var(--space-10) 0 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  position: relative;
-  background: var(--color-primary-tint);
+/* Hero split: text beside the (portrait) mural image */
+.hero__split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: center;
 }
-.hero__feature img {
+@media (min-width: 880px) {
+  .hero__split {
+    grid-template-columns: 1fr minmax(340px, 440px);
+    gap: var(--space-12);
+  }
+}
+.hero__text { min-width: 0; }
+.hero__text .hero__lede { margin-bottom: var(--space-6); }
+
+.hero__portrait { margin: 0; }
+.hero__portrait img {
   width: 100%;
+  height: auto;
   display: block;
-  aspect-ratio: 16 / 7;
-  object-fit: cover;
-  object-position: center 35%;
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
 }
-.hero__feature figcaption {
+.hero__portrait figcaption {
   margin-top: var(--space-2);
   font-size: var(--text-xs);
   color: var(--color-text-muted);
@@ -196,13 +205,10 @@ main { display: block; }
   text-align: right;
   padding: 0 var(--space-1);
 }
-.hero__feature figcaption a {
+.hero__portrait figcaption a {
   color: var(--color-text-muted);
   text-decoration: underline;
   font-style: normal;
-}
-@media (max-width: 600px) {
-  .hero__feature img { aspect-ratio: 4 / 3; object-position: center 40%; }
 }
 
 .hero__sites-grid {
@@ -457,6 +463,20 @@ main { display: block; }
 .log-entry__date { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-muted); }
 .log-entry__title { font-family: var(--font-display); font-size: var(--text-lg); margin: var(--space-1) 0 var(--space-2); }
 .log-entry__tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
+.log-entry__image {
+  margin: var(--space-3) 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-primary-tint);
+}
+.log-entry__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 360px;
+  object-fit: cover;
+  object-position: center;
+}
 
 /* -------- Stat strip -------- */
 .stat-strip {

@@ -1,7 +1,18 @@
 {
   "$schema_version": "1.0",
-  "_note": "Project log entries. Reverse-chronological. 40–120 words each. Tags: site (jardim-pantanal/parque-das-tribos/nelson-mandelapark/ede), wp (wp1-5), category (governance, fieldwork, vacancies, publication, partner-event).",
+  "_note": "Project log entries. Reverse-chronological. 40–120 words each. Tags: site (jardim-pantanal/parque-das-tribos/nelson-mandelapark/ede), wp (wp1-5), category (governance, fieldwork, vacancies, publication, partner-event). Optional fields: `image` (filename inside assets/img/news/, e.g. 'kickoff.jpg'), `image_alt_en` and `image_alt_pt` (one-sentence description for screen readers).",
   "entries": [
+    {
+      "date": "2026-05-28",
+      "title_en": "Kickoff: the first in-person meeting, and a walk through Jardim Pantanal",
+      "title_pt": "Lançamento: o primeiro encontro presencial e uma caminhada pelo Jardim Pantanal",
+      "tags": ["wp1", "partner-event", "fieldwork", "jardim-pantanal"],
+      "image": "fapesp-kickoff-2026.jpeg",
+      "image_alt_en": "Consortium members stand together in front of the Jardim Pantanal mural, which depicts children playing in the rain by the Tietê river.",
+      "image_alt_pt": "Membros do consórcio reunidos em frente ao mural do Jardim Pantanal, que retrata crianças brincando na chuva à beira do Rio Tietê.",
+      "body_en": "The Amsterdam and São Paulo sides of the consortium met in person for the first time at FAPESP, where the five Merian-funded projects had gathered for a three-day kickoff. The first two days belonged to the conference room. Each team introduced its work; the projects then sat down together to compare notes, ask questions, and look for the places where their plans overlap.\n\nOn the third day the meeting moved out of the conference room and into the field. Together with our local partner Instituto Alana, the Brazilian, Dutch and Alana teams walked Jardim Pantanal — the floodplain neighbourhood that is one of the project's case sites. Walking the place together gave the Dutch side a first real sense of where this work will live over the coming five years. A strong, memorable beginning, and a promising start to the project.",
+      "body_pt": "As equipes de Amsterdã e São Paulo do consórcio encontraram-se pessoalmente pela primeira vez na FAPESP, onde os cinco projetos financiados pelo Merian Fund se reuniram para um lançamento de três dias. Os dois primeiros dias pertenceram à sala de conferências. Cada equipe apresentou o seu trabalho; em seguida, os projetos sentaram-se juntos para comparar notas, fazer perguntas e procurar os pontos em que os seus planos se sobrepõem.\n\nNo terceiro dia, o encontro saiu da sala de conferências e foi para o campo. Em colaboração com o nosso parceiro local Instituto Alana, as equipes brasileira, holandesa e da Alana percorreram o Jardim Pantanal — o bairro de várzea que é um dos sítios de estudo do projeto. Caminhar pelo lugar juntos deu ao lado holandês uma primeira percepção real de onde este trabalho vai acontecer ao longo dos próximos cinco anos. Um começo forte e marcante, e um início promissor para o projeto."
+    },
     {
       "date": "2025-12-10",
       "title_en": "Project funded under the NWO–FAPESP Merian Fund call",
