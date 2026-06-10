@@ -74,46 +74,11 @@
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <div class="site-footer__grid">
-        <div>
-          <h3>{{ project.name_short }}</h3>
-          <p style="font-size: var(--text-sm); max-width: 40ch; color: #c8d6da;">
-            {{ "REACH Nexus is the public name of the Urban Climate Health Nexus (UCH-Nexus) consortium, jointly funded by NWO and FAPESP." if lang == "en" else "REACH Nexus é o nome público do consórcio Urban Climate Health Nexus (UCH-Nexus), financiado conjuntamente por NWO e FAPESP." }}
-          </p>
-        </div>
-        <div>
-          <h3>{{ "Project" if lang == "en" else "Projeto" }}</h3>
-          <ul>
-            <li><a href="{{ home_url }}">{{ "Home" if lang == "en" else "Início" }}</a></li>
-            <li><a href="{{ sites_url }}">{{ "Case sites" if lang == "en" else "Sítios" }}</a></li>
-            <li><a href="{{ wp_url }}">{{ "Work packages" if lang == "en" else "Pacotes de trabalho" }}</a></li>
-            <li><a href="{{ team_url }}">{{ "Team" if lang == "en" else "Equipe" }}</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>{{ "About" if lang == "en" else "Sobre" }}</h3>
-          <ul>
-            <li><a href="{{ about_url }}governance.html">{{ "Governance" if lang == "en" else "Governança" }}</a></li>
-            <li><a href="{{ about_url }}ethics.html">{{ "Ethics" if lang == "en" else "Ética" }}</a></li>
-            <li><a href="{{ about_url }}data.html">{{ "Data &amp; FAIR" if lang == "en" else "Dados &amp; FAIR" }}</a></li>
-            <li><a href="{{ about_url }}ai-use.html">{{ "AI use" if lang == "en" else "Uso de IA" }}</a></li>
-            <li><a href="{{ about_url }}safeguarding.html">{{ "Safeguarding" if lang == "en" else "Salvaguarda" }}</a></li>
-            <li><a href="{{ about_url }}archival.html">{{ "Archival" if lang == "en" else "Arquivamento" }}</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>{{ "Connect" if lang == "en" else "Conecte-se" }}</h3>
-          <ul>
-            <li><a href="{{ contact_url }}">{{ "Contact" if lang == "en" else "Contato" }}</a></li>
-            <li><a href="{{ vacancies_url }}">{{ "Vacancies" if lang == "en" else "Vagas" }}</a></li>
-            <li><a href="{{ news_url }}">{{ "Project log" if lang == "en" else "Diário do projeto" }}</a></li>
-            <li><a href="{{ accessibility_url }}">{{ "Accessibility" if lang == "en" else "Acessibilidade" }}</a></li>
-            <li><a href="{{ project.github if project.github else '#' }}" rel="noopener">GitHub</a></li>
-          </ul>
-        </div>
-      </div>
+      <p class="site-footer__about">
+        <strong>{{ project.name_short }}</strong> — {{ "public name of the Urban Climate Health Nexus (UCH-Nexus) consortium, jointly funded by NWO and FAPESP under the Merian Fund." if lang == "en" else "nome público do consórcio Urban Climate Health Nexus (UCH-Nexus), financiado conjuntamente por NWO e FAPESP sob o Merian Fund." }}
+      </p>
       <div class="site-footer__bottom">
-        <span>© 2026 REACH Nexus consortium. {{ "Content licensed CC BY 4.0; site code MIT." if lang == "en" else "Conteúdo sob licença CC BY 4.0; código do site sob licença MIT." }}</span>
+        <span>© 2026 REACH Nexus consortium · {{ "Content CC BY 4.0; site code MIT." if lang == "en" else "Conteúdo CC BY 4.0; código do site MIT." }}</span>
         <span>{{ "Last updated" if lang == "en" else "Última atualização" }}: <time datetime="{{ last_updated }}">{{ last_updated }}</time></span>
       </div>
     </div>

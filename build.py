@@ -75,11 +75,8 @@ def url_set(lang: str, base_path: str = "") -> dict[str, str]:
         "team_url": base + "team.html",
         "about_url": base + "about/",
         "contact_url": base + "contact.html",
-        "vacancies_url": base + "vacancies.html",
         "news_url": base + "news.html",
-        "accessibility_url": base + "accessibility.html",
         "funding_url": base + "funding.html",
-        "outputs_url": base + "outputs.html",
     }
 
 
@@ -282,32 +279,15 @@ def build(check_only: bool = False, local: bool = False) -> None:
                 page_title=f"WP{wp['number']} — " + wp["title_" + lang],
                 page_description=wp["summary_" + lang][:180], project=project, funders=funders, last_updated=last_updated, base_path=base_path)
 
-        # 6) About hub + 6 sub-pages
+        # 6) About hub (short overview)
         render_page(env,
             lang=lang, page_key="about",
             body_template="page_about_index.html",
             body_ctx={"config": config_doc, "lang": lang, "alt_path": "about/"},
             out_path=ROOT / lang / "about" / "index.html",
             page_title=("About REACH Nexus" if lang == "en" else "Sobre o REACH Nexus"),
-            page_description=("Governance, ethics, data, AI, safeguarding and archival commitments." if lang == "en"
-                              else "Governança, ética, dados, IA, salvaguarda e compromissos de arquivamento."), project=project, funders=funders, last_updated=last_updated, base_path=base_path)
-
-        about_pages = [
-            ("governance", "Governance",        "Governança"),
-            ("ethics",     "Ethics",            "Ética"),
-            ("data",       "Data & FAIR",       "Dados & FAIR"),
-            ("ai-use",     "AI use",            "Uso de IA"),
-            ("safeguarding","Safeguarding",     "Salvaguarda"),
-            ("archival",   "Archival plan",     "Plano de arquivamento"),
-        ]
-        for slug, title_en, title_pt in about_pages:
-            render_page(env,
-                lang=lang, page_key="about",
-                body_template=f"page_about_{slug.replace('-', '_')}.html",
-                body_ctx={"config": config_doc, "lang": lang, "alt_path": f"about/{slug}.html"},
-                out_path=ROOT / lang / "about" / f"{slug}.html",
-                page_title=(title_en if lang == "en" else title_pt),
-                page_description=(title_en if lang == "en" else title_pt), project=project, funders=funders, last_updated=last_updated, base_path=base_path)
+            page_description=("Five-year Dutch–Brazilian research consortium on urban climate and health." if lang == "en"
+                              else "Consórcio de pesquisa Brasil–Países Baixos de cinco anos sobre clima urbano e saúde."), project=project, funders=funders, last_updated=last_updated, base_path=base_path)
 
         # 7b) Data sources dashboard
         render_page(env,
@@ -320,26 +300,6 @@ def build(check_only: bool = False, local: bool = False) -> None:
                               else "Catálogo curado de conjuntos de dados ambientais e de saúde de acesso aberto para São Paulo e os Países Baixos."),
             needs_dashboard=True,
             project=project, funders=funders, last_updated=last_updated, base_path=base_path)
-
-        # 8) Outputs
-        render_page(env,
-            lang=lang, page_key="about",
-            body_template="page_outputs.html",
-            body_ctx={"config": config_doc, "lang": lang, "alt_path": "outputs.html"},
-            out_path=ROOT / lang / "outputs.html",
-            page_title=("Outputs" if lang == "en" else "Produtos"),
-            page_description=("Publications, datasets, policy briefs and theses." if lang == "en"
-                              else "Publicações, conjuntos de dados, sínteses de política e teses."), project=project, funders=funders, last_updated=last_updated, base_path=base_path)
-
-        # 9) Vacancies
-        render_page(env,
-            lang=lang, page_key="about",
-            body_template="page_vacancies.html",
-            body_ctx={"config": config_doc, "lang": lang, "alt_path": "vacancies.html"},
-            out_path=ROOT / lang / "vacancies.html",
-            page_title=("Vacancies" if lang == "en" else "Vagas"),
-            page_description=("PhD and postdoc openings for the project." if lang == "en"
-                              else "Vagas de doutorado e pós-doutorado do projeto."), project=project, funders=funders, last_updated=last_updated, base_path=base_path)
 
         # 10) News / project log
         render_page(env,
@@ -370,16 +330,6 @@ def build(check_only: bool = False, local: bool = False) -> None:
             out_path=ROOT / lang / "contact.html",
             page_title=("Contact" if lang == "en" else "Contato"),
             page_description=("How to reach the consortium." if lang == "en" else "Como entrar em contato com o consórcio."), project=project, funders=funders, last_updated=last_updated, base_path=base_path)
-
-        # 13) Accessibility
-        render_page(env,
-            lang=lang, page_key="about",
-            body_template="page_accessibility.html",
-            body_ctx={"config": config_doc, "lang": lang, "alt_path": "accessibility.html"},
-            out_path=ROOT / lang / "accessibility.html",
-            page_title=("Accessibility" if lang == "en" else "Acessibilidade"),
-            page_description=("WCAG 2.2 AA commitment and how to flag issues." if lang == "en"
-                              else "Compromisso com WCAG 2.2 AA e como reportar problemas."), project=project, funders=funders, last_updated=last_updated, base_path=base_path)
 
     # Root-level redirect to /en/
     en_url = f"{base_path}/en/"
@@ -416,10 +366,8 @@ def write_sitemap(config: dict[str, Any], base_path: str = "") -> None:
     for lang in LANGS:
         for path in (
             "", "sites/", "team.html", "work-packages/",
-            "about/", "about/governance.html", "about/ethics.html", "about/data.html",
-            "about/ai-use.html", "about/safeguarding.html", "about/archival.html",
-            "data.html", "outputs.html", "vacancies.html", "news.html",
-            "funding.html", "contact.html", "accessibility.html",
+            "about/", "data.html", "news.html",
+            "funding.html", "contact.html",
         ):
             urls.append(f"{base}/{lang}/{path}")
         for site_id in ("jardim-pantanal", "parque-das-tribos", "nelson-mandelapark", "ede"):

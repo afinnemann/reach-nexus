@@ -440,17 +440,15 @@ main { display: block; }
   margin-top: var(--space-20);
 }
 .site-footer a { color: #c8d6da; }
-.site-footer__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-8);
+.site-footer__about {
+  font-size: var(--text-sm);
+  color: #c8d6da;
+  max-width: 75ch;
+  margin: 0 0 var(--space-5);
 }
-@media (min-width: 800px) { .site-footer__grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
-.site-footer h3 { color: #fff; font-size: var(--text-base); text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 var(--space-3); }
-.site-footer ul { list-style: none; padding: 0; margin: 0; }
-.site-footer li { margin-bottom: var(--space-2); font-size: var(--text-sm); }
+.site-footer__about strong { color: #fff; }
 .site-footer__bottom {
-  margin-top: var(--space-10); padding-top: var(--space-5);
+  padding-top: var(--space-4);
   border-top: 1px solid rgba(255,255,255,0.12);
   font-size: var(--text-xs); color: #9aa6aa;
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4);
