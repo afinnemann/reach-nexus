@@ -14,14 +14,14 @@
     "summary_pt": "Eventos climáticos extremos cada vez mais intensos afetam desproporcionalmente populações marginalizadas, aprofundando desigualdades e vulnerabilidades em saúde. Esta \"policrise\" complexa é estudada por uma perspectiva sistêmica. São desenvolvidos quatro estudos de caso em que especialistas e partes interessadas modelam, conjuntamente, vulnerabilidades e identificam loops de retroalimentação para encontrar alvos-chave de intervenção. Em seguida, vem a coleta de dados, com uma abordagem de ciência cidadã que garante que os modelos reflitam contextos locais e experiências vividas. Esses modelos são refinados ao longo do tempo, gerando recomendações de política específicas para cada sítio e um arcabouço de modelagem transferível para outros contextos urbanos vulneráveis no mundo."
   },
   "contact": {
-    "press_email": "press@reach-nexus.org",
-    "general_email": "info@reach-nexus.org",
+    "press_email": "press@reach-nexus.com",
+    "general_email": "info@reach-nexus.com",
     "github": "https://github.com/reach-nexus/reach-nexus.github.io",
     "address_en": "Universiteit van Amsterdam · Faculty of Social and Behavioural Sciences · REACH Nexus · Nieuwe Achtergracht 129B · 1018 WS Amsterdam · The Netherlands",
     "address_pt": "Universidade de Amsterdã · Faculdade de Ciências Sociais e Comportamentais · REACH Nexus · Nieuwe Achtergracht 129B · 1018 WS Amsterdam · Países Baixos"
   },
   "deploy": {
-    "canonical_base": "https://reach-nexus.org",
+    "canonical_base": "https://reach-nexus.com",
     "base_path": "",
     "_note_base_path": "Set to '' (empty string) when serving from a root domain (custom domain, or a <user>.github.io repo). Set to '/<repo-name>' when serving from a project repo. Affects all internal URLs and the sitemap.",
     "default_lang": "en",
