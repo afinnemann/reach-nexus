@@ -10,12 +10,11 @@
       {% for wp in wps %}
       <article class="wp-card">
         <div class="wp-card__num">WP{{ wp.number }}</div>
-        <h2 class="wp-card__title"><a href="{{ wp.id }}.html" style="text-decoration: none; color: inherit;">{{ wp["title_" + lang] }}</a></h2>
+        <h2 class="wp-card__title">{{ wp["title_" + lang] }}</h2>
         <div class="wp-card__meta">
           {% if lang == "en" %}Lead{% else %}Liderança{% endif %}: {{ wp["lead_" + lang] }} · {% if lang == "en" %}Months{% else %}Meses{% endif %} {{ wp.months }}
         </div>
         <p>{{ wp["summary_" + lang] }}</p>
-        <a class="wp-card__link" href="{{ wp.id }}.html">{% if lang == "en" %}Open WP{{ wp.number }}{% else %}Abrir WP{{ wp.number }}{% endif %} →</a>
       </article>
       {% endfor %}
     </div>

@@ -269,16 +269,6 @@ def build(check_only: bool = False, local: bool = False) -> None:
             page_description=("Five work packages across governance, modelling, health, citizen science, and policy." if lang == "en"
                               else "Cinco pacotes de trabalho: governança, modelagem, saúde, ciência cidadã e políticas."), project=project, funders=funders, last_updated=last_updated, base_path=base_path)
 
-        for wp in wps_doc["wps"]:
-            render_page(env,
-                lang=lang, page_key="wp",
-                body_template="page_wp_detail.html",
-                body_ctx={"wp": wp, "team": team_doc["members"], "config": config_doc, "lang": lang,
-                          "alt_path": f"work-packages/{wp['id']}.html"},
-                out_path=ROOT / lang / "work-packages" / f"{wp['id']}.html",
-                page_title=f"WP{wp['number']} — " + wp["title_" + lang],
-                page_description=wp["summary_" + lang][:180], project=project, funders=funders, last_updated=last_updated, base_path=base_path)
-
         # 6) About hub (short overview)
         render_page(env,
             lang=lang, page_key="about",
@@ -372,8 +362,6 @@ def write_sitemap(config: dict[str, Any], base_path: str = "") -> None:
             urls.append(f"{base}/{lang}/{path}")
         for site_id in ("jardim-pantanal", "parque-das-tribos", "nelson-mandelapark", "ede"):
             urls.append(f"{base}/{lang}/sites/{site_id}.html")
-        for wp_id in ("wp1", "wp2", "wp3", "wp4", "wp5"):
-            urls.append(f"{base}/{lang}/work-packages/{wp_id}.html")
     body = ['<?xml version="1.0" encoding="UTF-8"?>',
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:

@@ -40,7 +40,7 @@
           {% for wp_id in site.wp_focus %}
             {% set wp = wps | selectattr("id", "equalto", wp_id) | first %}
             {% if wp %}
-            <li><a href="../work-packages/{{ wp.id }}.html"><strong>WP{{ wp.number }}</strong> — {{ wp["title_" + lang] }}</a></li>
+            <li><strong>WP{{ wp.number }}</strong> — {{ wp["title_" + lang] }}</li>
             {% endif %}
           {% endfor %}
         </ul>
