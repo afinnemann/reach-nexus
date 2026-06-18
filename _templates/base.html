@@ -36,9 +36,8 @@
 
   <header class="site-header" role="banner">
     <div class="site-header__inner">
-      <a href="{{ home_url }}" class="brand" aria-label="{{ project.name_short }} home">
-        <span class="brand__mark">REACH</span><span>Nexus</span>
-        <span class="brand__sub">· UCH-Nexus</span>
+      <a href="{{ home_url }}" class="brand" aria-label="{{ project.name_short }} — home">
+        <img src="{{ base_path }}/assets/img/reach-nexus-logo.png" alt="{{ project.name_short }}" class="brand__logo">
       </a>
       <nav class="nav" role="navigation" aria-label="{{ 'Primary' if lang == 'en' else 'Principal' }}">
         {% for item in nav_items %}

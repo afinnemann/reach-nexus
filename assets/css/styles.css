@@ -105,16 +105,19 @@ main { display: block; }
   margin: 0 auto;
 }
 .brand {
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  display: inline-flex; align-items: baseline; gap: var(--space-2);
 }
-.brand__mark { color: inherit; }
-.brand__sub { font-size: var(--text-xs); color: var(--color-text-muted); font-family: var(--font-body); font-weight: 400; letter-spacing: 0; }
+.brand__logo {
+  height: 56px;
+  width: auto;
+  max-width: min(320px, 60vw);
+  display: block;
+}
+@media (max-width: 600px) {
+  .brand__logo { height: 44px; }
+}
 
 .nav { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); }
 .nav a {
