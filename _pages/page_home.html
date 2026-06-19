@@ -23,14 +23,12 @@
       </figure>
     </div>
 
-    <div class="hero__sites-grid" aria-label="{% if lang == 'en' %}Case sites{% else %}Sítios{% endif %}">
-      {% for s in sites %}
-      <a class="hero__site-card" href="sites/{{ s.id }}.html">
-        <div class="hero__site-card__country">{{ s.country_flag }} {{ s["city_" + lang] }}</div>
-        <div class="hero__site-card__name">{{ s["name_" + lang] }}</div>
-        <div class="hero__site-card__tagline">{{ s["region_" + lang] }}</div>
-      </a>
-      {% endfor %}
+    <h2 class="visually-hidden">{% if lang == "en" %}Project at a glance{% else %}Projeto em números{% endif %}</h2>
+    <div class="stat-strip">
+      <div class="stat"><div class="stat__num">4</div><div class="stat__label">{% if lang == "en" %}Case sites{% else %}Sítios{% endif %}</div></div>
+      <div class="stat"><div class="stat__num">5</div><div class="stat__label">{% if lang == "en" %}Years (2026–2030){% else %}Anos (2026–2030){% endif %}</div></div>
+      <div class="stat"><div class="stat__num">2</div><div class="stat__label">{% if lang == "en" %}Countries{% else %}Países{% endif %}</div></div>
+      <div class="stat"><div class="stat__num">9</div><div class="stat__label">{% if lang == "en" %}Partner institutions{% else %}Instituições parceiras{% endif %}</div></div>
     </div>
   </div>
 </section>
@@ -87,17 +85,15 @@
 {{ sites | tojson }}
       </script>
     </div>
-  </div>
-</section>
 
-<section class="section" aria-labelledby="stats-heading">
-  <div class="container">
-    <h2 id="stats-heading" class="visually-hidden">{% if lang == "en" %}Project at a glance{% else %}Projeto em números{% endif %}</h2>
-    <div class="stat-strip">
-      <div class="stat"><div class="stat__num">4</div><div class="stat__label">{% if lang == "en" %}Case sites{% else %}Sítios{% endif %}</div></div>
-      <div class="stat"><div class="stat__num">5</div><div class="stat__label">{% if lang == "en" %}Years (2026–2030){% else %}Anos (2026–2030){% endif %}</div></div>
-      <div class="stat"><div class="stat__num">2</div><div class="stat__label">{% if lang == "en" %}Countries{% else %}Países{% endif %}</div></div>
-      <div class="stat"><div class="stat__num">9</div><div class="stat__label">{% if lang == "en" %}Partner institutions{% else %}Instituições parceiras{% endif %}</div></div>
+    <div class="hero__sites-grid" style="margin-top: var(--space-6);" aria-label="{% if lang == 'en' %}Case sites{% else %}Sítios{% endif %}">
+      {% for s in sites %}
+      <a class="hero__site-card" href="sites/{{ s.id }}.html">
+        <div class="hero__site-card__country">{{ s.country_flag }} {{ s["city_" + lang] }}</div>
+        <div class="hero__site-card__name">{{ s["name_" + lang] }}</div>
+        <div class="hero__site-card__tagline">{{ s["region_" + lang] }}</div>
+      </a>
+      {% endfor %}
     </div>
   </div>
 </section>
