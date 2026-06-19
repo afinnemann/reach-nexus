@@ -32,8 +32,8 @@
     {
       "id": "wp2",
       "number": 2,
-      "title_en": "Joint Modelling — Designing the Model",
-      "title_pt": "Modelagem Conjunta — Desenhando o Modelo",
+      "title_en": "Joint Modelling: Designing the Model",
+      "title_pt": "Modelagem Conjunta: Desenhando o Modelo",
       "lead_en": "Reinout Wiers",
       "lead_pt": "Reinout Wiers",
       "lead_ids": ["wiers"],
@@ -60,8 +60,8 @@
     {
       "id": "wp3",
       "number": 3,
-      "title_en": "Health Effects of Climate Extremes — Public Policy and Systems Analysis",
-      "title_pt": "Efeitos dos Extremos Climáticos sobre a Saúde — Análise de Políticas Públicas e Sistemas",
+      "title_en": "Health Effects of Climate Extremes: Public Policy and Systems Analysis",
+      "title_pt": "Efeitos dos Extremos Climáticos sobre a Saúde: Análise de Políticas Públicas e Sistemas",
       "lead_en": "Leandro Giatti & Vanessa Harris",
       "lead_pt": "Leandro Giatti & Vanessa Harris",
       "lead_ids": ["giatti", "harris"],

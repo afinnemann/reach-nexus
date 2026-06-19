@@ -78,7 +78,7 @@
           <p><strong>{% if lang == "en" %}Map unavailable without JavaScript.{% else %}Mapa indisponível sem JavaScript.{% endif %}</strong> {% if lang == "en" %}The four case sites are:{% else %}Os quatro sítios são:{% endif %}</p>
           <ul>
             {% for s in sites %}
-            <li><strong>{{ s["name_" + lang] }}</strong> — {{ s["city_" + lang] }}, {{ s["region_" + lang] }} ({{ s.country }})</li>
+            <li><strong>{{ s["name_" + lang] }}</strong>, {{ s["city_" + lang] }}, {{ s["region_" + lang] }} ({{ s.country }})</li>
             {% endfor %}
           </ul>
         </div>

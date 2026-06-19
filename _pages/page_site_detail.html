@@ -40,7 +40,7 @@
           {% for wp_id in site.wp_focus %}
             {% set wp = wps | selectattr("id", "equalto", wp_id) | first %}
             {% if wp %}
-            <li><strong>WP{{ wp.number }}</strong> — {{ wp["title_" + lang] }}</li>
+            <li><strong>WP{{ wp.number }}</strong>: {{ wp["title_" + lang] }}</li>
             {% endif %}
           {% endfor %}
         </ul>
@@ -52,7 +52,7 @@
           <div class="map"></div>
           <noscript>
             <div class="map-fallback">
-              <p><strong>{{ site["name_" + lang] }}</strong> — {{ site["city_" + lang] }}, {{ site["region_" + lang] }}</p>
+              <p><strong>{{ site["name_" + lang] }}</strong>, {{ site["city_" + lang] }}, {{ site["region_" + lang] }}</p>
               <p>{{ site.coords["precision_note_" + lang] }}</p>
             </div>
           </noscript>
@@ -60,7 +60,7 @@
         </div>
         <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">
           <strong>{% if lang == "en" %}Coordinate precision{% else %}Precisão das coordenadas{% endif %}:</strong>
-          {{ site.coords.precision }} — {{ site.coords["precision_note_" + lang] }}
+          {{ site.coords.precision }}. {{ site.coords["precision_note_" + lang] }}
         </p>
       </div>
     </div>
