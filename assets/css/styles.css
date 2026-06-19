@@ -87,6 +87,11 @@ code { font-family: var(--font-mono); font-size: 0.95em; background: var(--color
 
 main { display: block; }
 .section { padding: var(--space-12) 0; }
+/* Zero the h2 top-margin when it's the first thing in a section's container
+   so section padding + h2 margin don't stack. */
+.section > .container > h2:first-child,
+.section > .container-narrow > h2:first-child,
+.section > .container-wide > h2:first-child { margin-top: 0; }
 .section--tinted { background: var(--color-primary-tint); }
 .section--warm { background: var(--color-surface-warm); }
 
